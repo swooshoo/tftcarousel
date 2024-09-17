@@ -4,3 +4,8 @@ A dashboard to practice deploying on Streamlit. Using data from Set 1, with the 
 to Implement:
 1. Champions' Best In-Slot Items
 2. Ability Descriptions
+
+template.py is not to be edited
+app.py is to be edited
+main.ipynb is to be used for data exploring
+riot.txt is not to be edited
