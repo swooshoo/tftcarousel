@@ -13,7 +13,7 @@ st.set_page_config(layout="wide", page_title="TFT Set 3 Dashboard", page_icon=":
 def load_data():
     path = "Set3Champions.csv"
     if not os.path.isfile(path):
-        path = f"https://github.com/streamlit/demo-uber-nyc-pickups/raw/main/{path}"
+        path = f"https://github.com/swooshoo/set3carousel{path}"
 
     data = pd.read_csv(
         path,
