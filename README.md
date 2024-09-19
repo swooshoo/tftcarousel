@@ -1,8 +1,7 @@
 # set 12 dashboard
-A dashboard to practice deploying on Streamlit. Using data from Set 1, with the simple goal of displaying Champions and their traits.
+A dashboard to practice deploying on Streamlit. Will first try and implement a dashboard with selectable pictures of set 12 units.
 
-to Implement:
-1. Champions' Best In-Slot Items
-2. Ability Descriptions
-
+Features To Implement:
+- Unit Descriptions
+- Origins, Classes, Cost Borders
 do not edit template.py, riot.txt
