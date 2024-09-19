@@ -1,4 +1,4 @@
-# set 3 dashboard
+# set 12 dashboard
 A dashboard to practice deploying on Streamlit. Using data from Set 1, with the simple goal of displaying Champions and their traits.
 
 to Implement:
