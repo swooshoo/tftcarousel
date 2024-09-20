@@ -61,7 +61,7 @@ def create_tft_grid():
                 
 from streamlit_elements import elements, mui, html, dashboard
 
-def create_dashboard():
+def create_dashboard(): #resizable, draggable dashboard
     with elements("dashboard"):
     # You can create a draggable and resizable dashboard using
     # any element available in Streamlit Elements
@@ -102,17 +102,29 @@ def image_select_demo():
     img = image_select(
         label="Select a unit",
         images=[
-            "briar.webp",
+            "briar.png",
             "camille.jpg",
             "diana.png",
             "milio.webp",
-            "morgana.webp",
+            "morgana.png",
             "norra.png",
-            "smolder.webp",
-            "xerath.webp",
+            "smolder.png",
+            "xerath.png",
+            "fiora.png",
+            "gwen.png",
+            "kalista.png",
+            "karma.png",
+            "nami.png",
+            "nasus.png",
+            "olaf.png",
+            "rakan.png",
+            "ryze.png",
+            "tahmkench.png",
+            "taric.png",
+            "varus.png",
         ],
 
-        captions=["Briar", "Camille","Diana","Milio","Morgana","Norra","Smolder","Xerath"],
+        captions=["Briar", "Camille","Diana","Milio","Morgana","Norra","Smolder","Xerath","Fiora","Gwen","Kalista","Karma","Nami","Nasus","Olaf","Rakan","Ryze","Tahm Kench","Taric","Varus",],
         use_container_width=False
     )
 if __name__ == "__main__":
