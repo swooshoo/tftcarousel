@@ -1,6 +1,6 @@
-name,cost,health,defense,magic_resist,attack,attack_range,attack_speed,dps,skill_name,skill_cost,origin,class
-gangplank,5,1000,30,20,60,1,1,60,Orbital Strike,100/175,Space Pirate,"['Mercenary', 'Demolitionist']"
-graves,1,650,35,20,55,1,0.55,30,Smoke Grenade,50/80,Space Pirate,['Blaster']
+name,cost,health,defense,magic_resist,attack,attack_range,attack_speed,dps,skill_name,skill_cost,origin,class,image_path 
+gangplank,5,1000,30,20,60,1,1,60,Orbital Strike,100/175,Space Pirate,"['Mercenary', 'Demolitionist']", images/briar.png
+graves,1,650,35,20,55,1,0.55,30,Smoke Grenade,50/80,Space Pirate,['Blaster'], image
 neeko,3,800,35,20,50,2,0.65,33,Pop Blossom,75/150,Star Guardian,['Protector']
 darius,2,750,35,20,60,1,0.65,39,Dreadnova Guillotine,0/60,Space Pirate,['Mana-Reaver']
 rakan,2,600,35,20,45,2,0.7,32,Grand Entrance,50/100,Celestial,['Protector']
