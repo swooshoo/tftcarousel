@@ -12,29 +12,18 @@ IMAGE_DIR = os.path.join(BASE_DIR, "images")
 @st.cache_resource
 def load_data():
     path = "Set12Champions.csv"
-    if not os.path.isfile(path):
-        path = f"https://docs.google.com/spreadsheets/d/1dBq9ZXdW10H_U_Zr84alFP4dQn71gRQOSwbJP344rrE/edit?gid=910518616#gid=910518616"
+    data = pd.read_csv(path, nrows=52, skiprows=1, usecols=range(14),
+                       names=["unit", "cost", "health", "armor", "magic_resist", "attack", 
+                              "attack_range", "attack_speed", "dps", "skill_name", 
+                              "skill_cost", "origin", "class", "image_path"])
 
-    data = pd.read_csv(
-        path,
-        nrows=52,
-        names=[
-            "unit", "cost", "health", "armor", "magic_resist", "attack", "attack_range",
-            "attack_speed", "dps", "skill_name", "skill_cost", "origin", "class", "image_path"
-        ],  # Now includes 'image_path'
-        skiprows=1,
-        usecols=range(14),
-    )
-    
-    # Convert the 'class' column to a list of classes
     data['class'] = data['class'].str.split('/')
-    
-    # Prepend the base image directory to each 'image_path'
-    data['image_path'] = data['image_path'].apply(lambda img: os.path.join(IMAGE_DIR, img))
+    data['image_path'] = "static/images/" + data['image_path'].fillna('')  # Prepend 'static/images/' to paths
+
     return data
 
 # Modify create_dashboard to display the image using the path from the CSV
-def create_dashboard(unit_info):  # No need to pass selected_unit separately
+def create_dashboard(unit_info):
     with elements("dashboard"):
         layout = [
             dashboard.Item("first_item", 0, 0, 4, 2),
@@ -46,32 +35,36 @@ def create_dashboard(unit_info):  # No need to pass selected_unit separately
             print(updated_layout)
 
         with dashboard.Grid(layout, onLayoutChange=handle_layout_change):
-            # Display the unit's image using 'image_path' from the CSV
-            st.write(unit_info['image_path'])
             image_path = unit_info['image_path']
-            mui.Typography(f"Selected Unit: {unit_info['unit']}", key="first_item")
-            mui.Paper(html.img(src=image_path, style={"width": "100%"}), key="unit_image")
+            st.write(f"Image Path: {image_path}")  # Debugging to confirm path is correct
 
-            # Display traits
+            # Ensure that the image path is correctly served
+            mui.Typography(f"Selected Unit: {unit_info['unit']}", key="first_item")
+            mui.Paper(html.img(src=f"/{image_path}", style={"width": "100%"}), key="unit_image")
+
+            # Display traits and ability
             traits = ", ".join(unit_info['class'] + [unit_info['origin']])
             mui.Paper(f"Traits: {traits}", key="second_item")
-
-            # Display ability
             ability = f"Ability: {unit_info['skill_name']} (Cost: {unit_info['skill_cost']})"
             mui.Paper(ability, key="third_item")
 
 # The image_select_demo function stays the same, it retrieves the selected unit and its info
 def image_select_demo():
     images = [
-        "images/briar.png", "images/camille.jpg", "images/diana.png", "images/milio.webp",
-        "images/morgana.png", "images/norra.png", "images/smolder.png", "images/xerath.png",
-        "images/fiora.png", "images/gwen.png", "images/kalista.png", "images/karma.png",
-        "images/nami.png", "images/nasus.png", "images/olaf.png", "images/rakan.png",
-        "images/ryze.png", "images/tahmkench.png", "images/taric.png", "images/varus.png",
+        "static/images/briar.png", "static/images/camille.png", "static/images/diana.png", "static/images/milio.png",
+        "static/images/morgana.png", "static/images/norra.png", "static/images/smolder.png", "static/images/xerath.png",
+        "static/images/fiora.png", "static/images/gwen.png", "static/images/kalista.png", "static/images/karma.png",
+        "static/images/nami.png", "static/images/nasus.png", "static/images/olaf.png", "static/images/rakan.png",
+        "static/images/ryze.png", "static/images/tahmkench.png", "static/images/taric.png", "static/images/varus.png",
+        "static/images/bard.png", "static/images/ezreal.png", "static/images/hecarim.png", "static/images/hwei.png",
+        "static/images/jinx.png", "static/images/katarina.png", "static/images/mordekaiser.png", "static/images/neeko.png", 
+        "static/images/shen.png", "static/images/swain.png", "static/images/veigar.png", "static/images/vex.png", "static/images/wukong.png",
+        
     ]
     captions = ["Briar", "Camille", "Diana", "Milio", "Morgana", "Norra", "Smolder", "Xerath", "Fiora", 
                 "Gwen", "Kalista", "Karma", "Nami", "Nasus", "Olaf", "Rakan", "Ryze", "Tahm Kench", 
-                "Taric", "Varus"]
+                "Taric", "Varus", "Bard", "Ezreal", "Hecarim", "Hwei", "Jinx", "Katarina", "Mordekaiser", "Neeko", "Shen", "Swain",
+                "Veigar", "Vex", "Wukong",]
 
     # Image selector
     img = image_select(
@@ -99,4 +92,5 @@ if __name__ == "__main__":
 
     if selected_unit_info is not None:
         create_dashboard(selected_unit_info)
+    
         
