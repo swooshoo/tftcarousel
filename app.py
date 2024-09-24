@@ -40,7 +40,8 @@ def create_dashboard(unit_info):
 
             # Ensure that the image path is correctly served
             mui.Typography(f"Selected Unit: {unit_info['unit']}", key="first_item")
-            mui.Paper(html.img(src=f"/{image_path}", style={"width": "100%"}), key="unit_image")
+            #mui.Paper(html.img(src=f"/{image_path}", style={"width": "100%"}), key="unit_image")
+            st.image(image=image_path)
 
             # Display traits and ability
             traits = ", ".join(unit_info['class'] + [unit_info['origin']])
