@@ -50,7 +50,7 @@ def create_dashboard(unit_info):
 
 # The image_select_demo function stays the same, it retrieves the selected unit and its info
 def image_select_demo():
-    images = [
+    images = [ #need to sort images from the csv itself later, hard-coded for now
         "static/images/briar.png", "static/images/camille.png", "static/images/diana.png", "static/images/milio.png",
         "static/images/morgana.png", "static/images/norra.png", "static/images/smolder.png", "static/images/xerath.png",
         "static/images/fiora.png", "static/images/gwen.png", "static/images/kalista.png", "static/images/karma.png",
@@ -71,7 +71,7 @@ def image_select_demo():
         label="Select a unit",
         images=images,
         captions=captions,
-        use_container_width=False,
+        use_container_dwidth=False,
         return_value="index"
     )
     

@@ -31,7 +31,7 @@ shen,3,850,50,50,60,1,0.7,42,annie_galaxyshieldblast,75/150,Pyro,['Bastion'],she
 swain,3,900,50,50,60,1,0.6,36,ashe_enchantedcrystalarrow,50/125,Frost,['Shapeshifter'],swain.png
 veigar,3,650,25,25,40,4,0.75,30,yasuo_lastbreath,0/100,Honeymancer,['Mage'],veigar.png
 vex,3,850,50,50,50,1,0.65,33,ekko_chronobreak,50/150,Chrono,['Mage'],vex.png
-wukong,3,1000,50,50,75,1,0.6,45,monkeyking_cyclone,50/150,N/A,['Druid'],wukong.png
+wukong,3,1000,50,50,75,1,0.6,45,monkeyking_cyclone,50/150,MONKEY,['Druid'],wukong.png
 ahri,2,550,20,20,35,4,0.75,26,irelia_bladesurge,0/30,Arcana,['Scholar'],ahri.png
 akali,2,700,45,45,55,1,0.75,41,ezreal_emp,50/125,Pyro,"['Warrior','Multistriker']",akali.png
 cassiopeia,2,600,20,20,35,4,0.75,26,jarvaniv_agelessstandard,50/100,Witchcraft,['Incantor'],cassiopeia.png
