@@ -71,7 +71,7 @@ def image_select_demo():
         label="Select a unit",
         images=images,
         captions=captions,
-        use_container_dwidth=False,
+        use_container_width=False,
         return_value="index"
     )
     
