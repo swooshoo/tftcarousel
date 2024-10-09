@@ -4,6 +4,9 @@ import streamlit as st
 from streamlit_elements import elements, mui, html, dashboard
 from streamlit_image_select import image_select
 
+import streamlit.components.v1 as components
+
+
 # Define the base directory where images are stored
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGE_DIR = os.path.join(BASE_DIR, "images")
@@ -12,7 +15,7 @@ IMAGE_DIR = os.path.join(BASE_DIR, "images")
 @st.cache_resource
 def load_data():
     path = "Set12Champions.csv"
-    data = pd.read_csv(path, nrows=52, skiprows=1, usecols=range(14),
+    data = pd.read_csv(path, nrows=60, skiprows=1, usecols=range(14),
                        names=["unit", "cost", "health", "armor", "magic_resist", "attack", 
                               "attack_range", "attack_speed", "dps", "skill_name", 
                               "skill_cost", "origin", "class", "image_path"])
@@ -39,33 +42,35 @@ def create_dashboard(unit_info):
             st.write(f"Image Path: {image_path}")  # Debugging to confirm path is correct
 
             # Ensure that the image path is correctly served
-            mui.Typography(f"Selected Unit: {unit_info['unit']}", key="first_item")
-            #mui.Paper(html.img(src=f"/{image_path}", style={"width": "100%"}), key="unit_image")
-            st.image(image=image_path)
-
-            # Display traits and ability
+            mui.Typography(f"{unit_info['unit'].title()}", key="first_item")
+            st.image(image=image_path, width=160)
+            
+            # Display traits using mui.Card 
             traits = ", ".join(unit_info['class'] + [unit_info['origin']])
-            mui.Paper(f"Traits: {traits}", key="second_item")
-            ability = f"Ability: {unit_info['skill_name']} (Cost: {unit_info['skill_cost']})"
-            mui.Paper(ability, key="third_item")
+            mui.Card(
+                mui.CardContent(mui.Typography(f"Traits: {traits}")), 
+                key="second_item",
+                outlined=True
+            )
 
+            # Display ability using mui.Card
+            ability = f"Ability: {unit_info['skill_name']} (Cost: {unit_info['skill_cost']})"
+            mui.Card(
+                mui.CardContent(mui.Typography(ability)), 
+                key="third_item",
+                outlined=True
+            )
+            
 # The image_select_demo function stays the same, it retrieves the selected unit and its info
 def image_select_demo():
-    images = [ #need to sort images from the csv itself later, hard-coded for now
-        "static/images/briar.png", "static/images/camille.png", "static/images/diana.png", "static/images/milio.png",
-        "static/images/morgana.png", "static/images/norra.png", "static/images/smolder.png", "static/images/xerath.png",
-        "static/images/fiora.png", "static/images/gwen.png", "static/images/kalista.png", "static/images/karma.png",
-        "static/images/nami.png", "static/images/nasus.png", "static/images/olaf.png", "static/images/rakan.png",
-        "static/images/ryze.png", "static/images/tahmkench.png", "static/images/taric.png", "static/images/varus.png",
-        "static/images/bard.png", "static/images/ezreal.png", "static/images/hecarim.png", "static/images/hwei.png",
-        "static/images/jinx.png", "static/images/katarina.png", "static/images/mordekaiser.png", "static/images/neeko.png", 
-        "static/images/shen.png", "static/images/swain.png", "static/images/veigar.png", "static/images/vex.png", "static/images/wukong.png",
-        
-    ]
-    captions = ["Briar", "Camille", "Diana", "Milio", "Morgana", "Norra", "Smolder", "Xerath", "Fiora", 
-                "Gwen", "Kalista", "Karma", "Nami", "Nasus", "Olaf", "Rakan", "Ryze", "Tahm Kench", 
-                "Taric", "Varus", "Bard", "Ezreal", "Hecarim", "Hwei", "Jinx", "Katarina", "Mordekaiser", "Neeko", "Shen", "Swain",
-                "Veigar", "Vex", "Wukong",]
+    # Load data to get images and captions from the CSV
+    data = load_data()
+
+    # Use the 'image_path' column for the image paths
+    images = data['image_path'].tolist()  # Image paths from CSV
+    
+    # Use the 'unit' column for captions
+    captions = data['unit'].str.title().tolist()  # Unit names from CSV
 
     # Image selector
     img = image_select(
@@ -78,7 +83,6 @@ def image_select_demo():
     
     if img is not None:
         # Load the corresponding unit data from CSV
-        data = load_data()
         selected_unit_info = data.iloc[img]  # Get the data row for the selected unit
         
         # Return the selected unit info (image path and data)
