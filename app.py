@@ -1,11 +1,8 @@
 import os
 import pandas as pd
 import streamlit as st
-from streamlit_elements import elements, mui, html, dashboard
-from streamlit_image_select import image_select
-
+from streamlit_elements import elements, mui, dashboard
 import streamlit.components.v1 as components
-
 
 # Define the base directory where images are stored
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -25,77 +22,77 @@ def load_data():
 
     return data
 
+# Custom image grid function for selecting images with clickable unit name buttons below
+def custom_image_grid(data):
+    images = data['image_path'].tolist()
+    captions = data['unit'].str.title().tolist()
+
+    # Manually set the number of columns (e.g., 4 columns per row)
+    cols = st.columns(4)  # Creates a grid with 4 columns
+
+    selected_idx = None
+    for idx, (img, caption) in enumerate(zip(images, captions)):
+        col_idx= idx % 4 # Rotate through the 4 columns
+        with cols[col_idx]:
+            # Display the image first
+            st.image(img, caption=None, width=100)  # Image without caption
+            # Place a button below each image with the unit's name as the label
+            if st.button(caption, key=f"btn_{idx}"):
+                selected_idx = idx  # Set selected index to current unit
+
+    return selected_idx
+
 # Modify create_dashboard to display the image using the path from the CSV
 def create_dashboard(unit_info):
-    with elements("dashboard"):
-        layout = [
-            dashboard.Item("first_item", 0, 0, 4, 2),
-            dashboard.Item("second_item", 4, 2, 4, 2),
-            dashboard.Item("third_item", 8, 2, 4, 2),
-        ]
+    st.subheader("Selected Unit Information")
+    st.image(unit_info['image_path'], width=160)
+    
+    st.write(f"**Unit Name**: {unit_info['unit'].title()}")
+    st.write(f"**Cost**: {unit_info['cost']}")
+    st.write(f"**Health**: {unit_info['health']}")
+    st.write(f"**Armor**: {unit_info['armor']}")
+    st.write(f"**Magic Resist**: {unit_info['magic_resist']}")
+    st.write(f"**Attack**: {unit_info['attack']}")
+    st.write(f"**Attack Range**: {unit_info['attack_range']}")
+    st.write(f"**Attack Speed**: {unit_info['attack_speed']}")
+    st.write(f"**DPS**: {unit_info['dps']}")
+    
+    traits = ", ".join(unit_info['class'] + [unit_info['origin']])
+    st.write(f"**Traits**: {traits}")
+    
+    ability = f"{unit_info['skill_name']} (Cost: {unit_info['skill_cost']})"
+    st.write(f"**Ability**: {ability}")
 
-        def handle_layout_change(updated_layout):
-            print(updated_layout)
-
-        with dashboard.Grid(layout, onLayoutChange=handle_layout_change):
-            image_path = unit_info['image_path']
-            st.write(f"Image Path: {image_path}")  # Debugging to confirm path is correct
-
-            # Ensure that the image path is correctly served
-            mui.Typography(f"{unit_info['unit'].title()}", key="first_item")
-            st.image(image=image_path, width=160)
-            
-            # Display traits using mui.Card 
-            traits = ", ".join(unit_info['class'] + [unit_info['origin']])
-            mui.Card(
-                mui.CardContent(mui.Typography(f"Traits: {traits}")), 
-                key="second_item",
-                outlined=True
-            )
-
-            # Display ability using mui.Card
-            ability = f"Ability: {unit_info['skill_name']} (Cost: {unit_info['skill_cost']})"
-            mui.Card(
-                mui.CardContent(mui.Typography(ability)), 
-                key="third_item",
-                outlined=True
-            )
-            
-# The image_select_demo function stays the same, it retrieves the selected unit and its info
+# Main image_select_demo function that integrates the custom grid
 def image_select_demo():
     # Load data to get images and captions from the CSV
     data = load_data()
 
-    # Use the 'image_path' column for the image paths
-    images = data['image_path'].tolist()  # Image paths from CSV
-    
-    # Use the 'unit' column for captions
-    captions = data['unit'].str.title().tolist()  # Unit names from CSV
+    # Create custom grid for selecting images
+    selected_idx = custom_image_grid(data)
 
-    # Image selector
-    img = image_select(
-        label="Select a unit",
-        images=images,
-        captions=captions,
-        use_container_width=False,
-        return_value="index"
-    )
-    
-    if img is not None:
-        # Load the corresponding unit data from CSV
-        selected_unit_info = data.iloc[img]  # Get the data row for the selected unit
-        
-        # Return the selected unit info (image path and data)
+    if selected_idx is not None:
+        selected_unit_info = data.iloc[selected_idx]
         return selected_unit_info
+    
     return None
 
 # Main function
 if __name__ == "__main__":
-    # Display the image select demo and pass the selected unit info to the dashboard
+    # Load data once
     load_data()
-    selected_unit_info = image_select_demo()
 
+    # Create two columns: left for image grid, right for selected unit details
+    col1, col2 = st.columns([2, 1])  # Left column wider than right column
+
+    # Display the image select demo and pass the selected unit info
+    with col1:
+        selected_unit_info = image_select_demo()
+
+    # If a unit is selected, display its information in the right column
     if selected_unit_info is not None:
-        create_dashboard(selected_unit_info)
-    
-        
+        with col2:
+            create_dashboard(selected_unit_info)
+    else:
+        with col2:
+            st.write("No unit selected yet.")
