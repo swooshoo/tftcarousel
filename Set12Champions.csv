@@ -1,5 +1,5 @@
 unit,cost,health,armor,magic_resist,attack_damage,attack_range,speed_of_attack,dps,skill_name,skill_cost,origin,class,image_path
-briar,5,1200,60,60,65,1,0.8,52,Certain Death,0/80,Eldritch,"['Shapeshifter','Ravenous]",briar.png
+briar,5,1200,60,60,65,1,0.8,52,Certain Death,0/80,Eldritch,"['Shapeshifter','Ravenous']",briar.png
 camille,5,1200,60,60,85,1,0.9,77,Temporal Anomaly,30/100,Chrono,['Multistriker'],camille.png
 diana,5,1200,60,60,60,1,0.85,51,Snowfall,40/120,Frost,['Bastion'],diana.png
 milio,5,900,40,60,50,4,0.8,40,Knick-Knack-Attack,0/90,Faerie,['Scholar'],milio.png

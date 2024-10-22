@@ -26,6 +26,12 @@ def load_data():
 # Create dashboard function to display selected unit's info
 def create_dashboard(unit_info):
     with elements("dashboard"):
+        
+        with st.container():
+            st.text(f"Selected Unit: {unit_info['unit'].title()}")
+            st.text(f"Traits: {unit_info['origin'].title()} {unit_info['class']}")
+            st.text('very stylish container')
+        
         layout = [
             dashboard.Item("first_item", 0, 0, 4, 2),
             dashboard.Item("second_item", 4, 2, 4, 2),
@@ -57,8 +63,7 @@ def create_dashboard(unit_info):
             )
 
 # Image selection demo with buttons
-def image_select_demo():
-    data = load_data()
+def image_select_demo(data):
     images = data['image_path'].tolist()
     captions = data['unit'].str.title().tolist()
 
@@ -79,9 +84,19 @@ def image_select_demo():
 # Main function
 if __name__ == "__main__":
     st.title("TFT Carousel Dashboard")
+    
+    # Load data once and pass it to other functions
+    data = load_data()
+    
+    tab1, tab2, tab3 = st.tabs(["All", "5 Costs", "4 Star"])
+    
+    # Show a default unit (first row) when the dashboard is first loaded
+    default_unit_info = data.iloc[0]
+    create_dashboard(default_unit_info)
 
-    # Display the dashboard first, then the image grid
-    selected_unit_info = image_select_demo()
+    # Allow user to select a unit after the default dashboard is displayed
+    selected_unit_info = image_select_demo(data)
 
+    # If a new unit is selected, update the dashboard with the selected unit
     if selected_unit_info is not None:
         create_dashboard(selected_unit_info)
