@@ -21,7 +21,7 @@ taric,4,1100,60,60,60,1,0.65,39,All Eyes on Me,50/100,Portal,['Bastion'],taric.p
 varus,4,850,30,30,55,4,0.75,41,Hail of Hellfire,20/100,Pyro,['Blaster'],varus.png
 bard,3,700,25,25,40,4,0.75,30,Traveling Whimsy,30/80,Sugarcraft,['Preserver'],bard.png
 ezreal,3,700,25,25,60,4,0.75,45,Portalshot Barrage,15/75,Portal,['Blaster'],ezreal.png
-hecarim,3,850,50,50,60,1,0.75,45,Rampage,0/40,Arcana,"['Basition','Multistriker']",hecarim.png
+hecarim,3,850,50,50,60,1,0.75,45,Rampage,0/40,Arcana,"['Bastion','Multistriker']",hecarim.png
 hwei,3,650,25,25,34,4,0.75,26,Subject: Storm,0/40,Frost,['Blaster'],hwei.png
 jinx,3,650,50,50,60,4,0.75,38,Get Excited!,0/50,Sugarcraft,['Hunter'],jinx.png
 katarina,3,800,45,45,50,1,0.75,38,Death Lotus,10/70,Faerie,['Warrior'],katarina.png
