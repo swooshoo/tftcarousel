@@ -1,0 +1,65 @@
+unit,cost,health,armor,magic_resist,attack_damage,attack_range,speed_of_attack,dps,skill_name,skill_cost,origin,class,type,image_path
+amumu,1,600/1080/1944,35,35,45/68/101,1,0.6,27/41/61,Obsolete Technology,PASSIVE,Automata,Watcher,Magic Tank,amumu.png
+darius,1,650/1170/2106,40,40,55/83/124,1,0.7,39/58/87,Decimate,,Conqueror,Watcher,Attack Fighter,darius.png
+draven,1,500/900/1620,35,35,45/68/101,1,0.6,27/41/61,Spinning Axes,,Conqueror,Pit Fighter,Attack Carry,draven.png
+irelia,1,700/1260/2268,40,40,55/83/124,1,0.7,39/58/87,Defiant Dance,,Rebel,Sentinel,Magic Tank,irelia.png
+lux,1,500/900/1620,40,40,55/83/125,1,0.7,39/58/88,Prismatic Barrier,,Academy,Sorceror,Magic Caster,lux.png
+maddie,1,500/900/1620,40,40,55/83/126,1,0.7,39/58/89,Fan the Hammer,,Enforcer,Sniper,Attack Caster,maddie.png
+morgana,1,500/900/1620,40,40,55/83/127,1,0.7,39/58/90,Tormented Soul,,Black Rose,Visionary,Magic Caster,morgana.png
+powder,1,500/900/1620,40,40,55/83/128,1,0.7,39/58/91,Misfit Toy,,"Family, Scrap",Ambusher,Magic Caster,powder.png
+singed,1,650/1170/2106,40,40,55/83/129,1,0.7,39/58/92,Dangerous Mutations,,Chembaron,Sentinel,Magic Tank,singed.png
+steb,1,650/1170/2106,40,40,55/83/130,1,0.7,39/58/93,Field Medicine,,Enforcer,Bruiser,Magic Tank,steb.png
+trundle,1,650/1170/2106,40,40,55/83/131,1,0.7,39/58/94,Desperate Chomp,,Scrap,Bruiser,Attack Tank,trundle.png
+vex,1,450/810/1458,40,40,55/83/132,1,0.7,39/58/95,Looming Darkness,,Rebel,Visionary,Magic Caster,vex.png
+violet,1,650/1170/2106,40,40,55/83/133,1,0.7,39/58/96,1-2-3 Combo,,Family,Pit Fighter,Attack Fighter,violet.png
+zyra,1,500/900/1620,40,40,55/83/134,1,0.7,39/58/97,Grasping Roots,,Experiment,Sorceror,Magic Caster,zyra.png
+akali,2,700/1260/2268,40,40,55/83/135,1,0.7,39/58/98,Shuriken Flip,,Rebel,Quickstriker,Magic Reaper,akali.png
+camille,2,700/1260/2268,40,40,55/83/136,1,0.7,39/58/99,Adaptive Strike,,Enforcer,Ambusher,Attack Fighter,camille.png
+leona,2,800/1440/2592,40,40,55/83/137,1,0.7,39/58/100,Eclipse,,Academy,Sentinel,Magic Tank,leona.png
+nocturne,2,700/1260/2268,40,40,55/83/138,1,0.7,39/58/101,Overdrive Blades,,Automata,Quickstriker,Attack Reaper,nocturne.png
+rell,2,800/1440/2592,40,40,55/83/139,1,0.7,39/58/102,Shattering Strike,,Conqueror,"Sentinel, Visionary",Magic Tank,rell.png
+renata_glasc,2,600/1080/1944,40,40,55/83/140,1,0.7,39/58/103,Loyalty Program,,Chembaron,Visionary,Magic Caster,renata_glasc.png
+sett,2,850/1530/2754,40,40,55/83/141,1,0.7,39/58/104,Facebreaker,,Rebel,Bruiser,Magic Tank,sett.png
+tristana,2,550/990/1782,40,40,55/83/142,1,0.7,39/58/105,Draw a Bead,,Emissary,Artillerist,Attack Caster,tristana.png
+urgot,2,700/1260/2268,40,40,55/83/143,1,0.7,39/58/106,Corrosive Charge,,Chembaron,Artillerist,Attack Fighter,urgot.png
+vander,2,800/1440/2592,40,40,55/83/144,1,0.7,39/58/107,Hound of the Underground ,,Family,Watcher,Attack Tank,vander.png
+vladimir,2,800/1440/2592,40,40,55/83/145,1,0.7,39/58/108,Transfusion,,Black Rose,"Watcher, Sorceror",Magic Tank,vladimir.png
+zeri,2,600/1080/1944,40,40,55/83/146,1,0.7,39/58/109,Living Battery,,Firelight,Sniper,Attack Carry,zeri.png
+ziggs,2,600/1080/1944,40,40,55/83/147,1,0.7,39/58/110,Bomb Full of Bombs,,Scrap,Ambusher,Magic Caster,ziggs.png
+blitzcrank,3,850/1530/2754,40,40,55/83/148,1,0.7,39/58/111,Static Field,,Automata,Dominator,Magic Tank,blitzcrank.png
+cassiopeia,3,700/1260/2268,40,40,55/83/149,1,0.7,39/58/112,Thorned Miasma,,Black Rose,Dominator,Magic Caster,cassiopeia.png
+ezreal,3,700/1260/2268,40,40,55/83/150,1,0.7,39/58/113,Essence Flux,,"Academy, Rebel",Artillerist,Attack Caster,ezreal.png
+gangplank,3,800/1440/2592,40,40,55/83/151,1,0.7,39/58/114,Harvest from Flames,,Scrap,"Form Swapper, Pit Fighter",Attack Fighter,gangplank.png
+gangplank_ranged,3,700/1260/2268,40,40,55/83/152,1,0.7,39/58/115,Sticky Bombs,,Scrap,"Form Swapper, Pit Fighter",Attack Fighter,gangplank_ranged.png
+kogmaw,3,650/1170/2106,40,40,55/83/153,1,0.7,39/58/116,Upgrading Barrage Module,,Automata,Sniper,Magic Carry,kogmaw.png
+loris,3,850/1530/2754,40,40,55/83/154,1,0.7,39/58/117,Piltover Bulwark,,Enforcer,Sentinel,Magic Tank,loris.png
+nami,3,700/1260/2268,40,40,55/83/155,1,0.7,39/58/118,Ocean's Ebb,,Emissary,Sorceror,Magic Caster,nami.png
+nunu_and_willump,3,800/1440/2592,40,40,55/83/156,1,0.7,39/58/119,ZOMBIE POWER!!,,Experiment,"Bruiser, Visionary",Magic Tank,nunu_and_willump.png
+renni,3,850/1530/2754,40,40,55/83/157,1,0.7,39/58/120,Sludgerunner's Smash,,Chembaron,Bruiser,Attack Tank,renni.png
+scar,3,850/1530/2754,40,40,55/83/158,1,0.7,39/58/121,Sumpsnipe Surprise,,Firelight,Watcher,Magic Tank,scar.png
+smeech,3,800/1440/2592,40,40,55/83/159,1,0.7,39/58/122,Scrap Hacker,,Chembaron,Ambusher,Attack Reaper,smeech.png
+swain,3,950/1710/3078,40,40,55/83/160,1,0.7,39/58/123,Demonic Ascension,,Conqueror,"Form Swapper, Sorceror",Magic Tank,swain.png
+swain_ranged,3,650/1170/2106,40,40,55/83/161,1,0.7,39/58/124,Murder of Crows,,Conqueror,"Form Swapper, Sorceror",Magic Tank,swain_ranged.png
+twisted_fate,3,700/1260/2268,40,40,55/83/162,1,0.7,39/58/125,Wild Cards,,Enforcer,Quickstriker,Magic Caster,twisted_fate.png
+ambessa,4,1100/1980/3564,40,40,55/83/163,1,0.7,39/58/126,Unrelenting Huntress,,"Emissary, Conqueror",Quickstriker,Attack Fighter,ambessa.png
+corki,4,850/1530/2754,40,40,55/83/164,1,0.7,39/58/127,Broadside Barrage,,Scrap,Artillerist,Attack Caster,corki.png
+mundo,4,1100/1980/3564,40,40,55/83/165,1,0.7,39/58/128,Maximum Dosage,,Experiment,Dominator,Magic Tank,mundo.png
+ekko,4,1100/1980/3564,40,40,55/83/166,1,0.7,39/58/129,Splitting Seconds,,"Firelight, Scrap",Ambusher,Magic Reaper,ekko.png
+elise,4,1100/1980/3564,40,40,55/83/167,1,0.7,39/58/130,Cocoon,,Black Rose,"Form Swapper, Bruiser",Magic Tank,elise.png
+elise_ranged,4,750/1350/2430,40,40,55/83/168,1,0.7,39/58/131,Volatile Spiderlings,,Black Rose,"Form Swapper, Bruiser",Magic Tank,elise_ranged.png
+garen,4,1000/1800/3240,40,40,55/83/169,1,0.7,39/58/132,Demacian Justice,,Emissary,Watcher,Attack Tank,garen.png
+heimerdinger,4,800/1440/2592,40,40,55/83/170,1,0.7,39/58/133,PROGRESSSSS!,,Academy,Visionary,Magic Caster,heimerdinger.png
+illaoi,4,1100/1980/3564,40,40,55/83/171,1,0.7,39/58/134,Test of Spirit,,Rebel,Sentinel,Magic Tank,illaoi.png
+silco,4,800/1440/2592,40,40,55/83/172,1,0.7,39/58/135,Canned Monstrosity,,Chembaron,Visionary,Magic Caster,silco.png
+twitch,4,800/1440/2592,40,40,55/83/173,1,0.7,39/58/136,Spray and Pray,,Experiment,Sniper,Attack Carry,twitch.png
+vi,4,1100/1980/3564,40,40,55/83/174,1,0.7,39/58/137,Wrecking Crew,,Enforcer,Pit Fighter,Attack Fighter,vi.png
+zoe,4,800/1440/2592,40,40,55/83/175,1,0.7,39/58/138,Paddle Star!,,Rebel,Sorceror,Magic Caster,zoe.png
+caitlyn,5,900/1620/2916,40,40,55/83/176,1,0.7,39/58/139,Air Raid,,Enforcer,Sniper,Attack Caster,caitlyn.png
+jayce,5,1200/2160/3888,40,40,55/83/177,1,0.7,39/58/140,Special Delivery,,Academy,Form Swapper,Attack Fighter,jayce.png
+jayce_ranged,5,900/1620/2916,40,40,55/83/178,1,0.7,39/58/141,Hexcrystal Destruction,,Academy,Form Swapper,Attack Fighter,jayce_ranged.png
+jinx,5,900/1620/2916,40,40,55/83/179,1,0.7,39/58/142,Ruin Everything ,,Rebel,Ambusher,Attack Caster,jinx.png
+leblanc,5,900/1620/2916,40,40,55/83/180,1,0.7,39/58/143,The Chains of Fate,,Black Rose,Sorceror,Magic Caster,leblanc.png
+malzahar,5,950/1710/3078,40,40,55/83/181,1,0.7,39/58/144,Call of the Machine,,Automata,Visionary,Magic Caster,malzahar.png
+mordekaiser,5,1200/2160/3888,40,40,55/83/182,1,0.7,39/58/145,Grasp of the Iron Revenant,,Conqueror,Dominator,Magic Fighter,mordekaiser.png
+rumble,5,1200/2160/3888,40,40,55/83/183,1,0.7,39/58/146,The Equalizer,,"Junker King, Scrap",Sentinel,Magic Fighter,rumble.png
+sevika,5,1200/2160/3888,40,40,55/83/184,1,0.7,39/58/147,Beat the Odds,,"High Roller, Chembaron",Pit Fighter,Attack Fighter,sevika.png
