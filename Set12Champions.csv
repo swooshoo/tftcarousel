@@ -46,7 +46,7 @@ syndra,2,550,20,20,35,4,0.75,26,Trascendence,0/60,Eldritch,['Incantor'],syndra.p
 tristana,2,550,20,20,55,4,0.75,41,Explosive Charge,0/60,Faerie,['Blaster'],tristana.png
 zilean,2,550,20,20,35,4,0.75,26,Time Bomb,20/70,Frost,"['Chrono','Preserver']",zilean.png
 ashe,1,450,15,15,50,4,0.7,35,Dark Tidings,50/100,Eldritch,['Multistriker'],ashe.png
-blitzcrank,1,650,40,40,65,1,0.55,36,Honey Barrier,40/90,Honeymancer,['Vanguard'],blitzcrank.png
+blitzcrank,1,650,40,40,65,1,0.55,36,Honey Barrier,40/90,Honeymancy,['Vanguard'],blitzcrank.png
 elise,1,650,40,40,50,1,0.6,30,Spider Form,30/90,Eldritch,['Shapeshifter'],elise.png
 jax,1,650,45,45,40,1,0.6,24,Grandmaster-At-Arms,20/60,Chrono,['Multistriker'],jax.png
 jayce,1,600,30,30,55,4,0.7,39,Hammer Form,0/60,Portal,['Shapeshifter'],jayce.png

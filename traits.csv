@@ -1,0 +1,28 @@
+name, unique, image_path, description
+Arcana, FALSE, arcana.svg, 
+Ascendant, TRUE, ascendant.svg
+Bastion, FALSE, bastion.svg
+Bat Queen, TRUE, batqueen.svg
+Best Friends, TRUE, bestfriends.svg
+Blaster, FALSE, blaster.svg
+Chrono, FALSE, chrono.svg
+Dragon, FALSE, dragon.svg
+Druid, TRUE, druid.svg
+Eldritch, FALSE, eldritch.svg
+Faerie, FALSE, faerie.svg
+Frost, FALSE, frost.svg
+Honeymancy, FALSE, honeymancy.svg
+Hunter, FALSE, hunter.svg
+Incantor, FALSE, incantor.svg
+Mage, FALSE, mage.svg
+Multistriker, FALSE, multistriker.svg
+Portal, FALSE, portal.svg
+Preserver, FALSE, preserver.svg
+Pyro, FALSE, pyro.svg
+Ravenous, TRUE, ravenous.svg
+Scholar, FALSE, scholar.svg
+Shapeshifter, FALSE, shapeshifter.svg
+Sugarcraft, FALSE, sugarcraft.svg
+Vanguard, FALSE, vanguard.svg
+Warrior, FALSE, warrior.svg
+Witchcraft, FALSE, witchcraft.svg

@@ -10,7 +10,7 @@ def load_data(path):
         path, nrows=60, skiprows=1, usecols=range(14),
         names=["unit", "cost", "health", "armor", "magic_resist", "attack", 
                "attack_range", "attack_speed", "dps", "skill_name", 
-               "skill_cost", "origin", "class", "image_path"]
+               "skill_c     ost", "origin", "class", "image_path"]
     )
     data['class'] = data['class'].str.split('/')
     data['image_path'] = "static/images/" + data['image_path'].fillna('')
@@ -19,7 +19,7 @@ def load_data(path):
 # Display dashboard function
 def create_dashboard(unit_info):
     with st.container():
-        st.image(unit_info['image_path'], use_column_width=True, output_format="PNG")
+        st.image(unit_info['image_path'], use_container_width=True, output_format="png")
         st.text(f"{unit_info['unit'].title()}")
         st.text(f"{unit_info['origin']}")
         st.text(f"{unit_info['class']}")
@@ -53,6 +53,9 @@ def image_select_demo(data):
 def main():
     st.header("Set 12 Units: First Glance", divider="gray")
     data = load_data("Set12Champions.csv")
+    if data is None:   
+        st.write("DATA NOT FOUND")
+        exit
     
     col1, col2 = st.columns([2.7, 2.3])
     
