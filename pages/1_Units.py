@@ -10,7 +10,7 @@ def load_data(path):
         path, nrows=60, skiprows=1, usecols=range(14),
         names=["unit", "cost", "health", "armor", "magic_resist", "attack", 
                "attack_range", "attack_speed", "dps", "skill_name", 
-               "skill_c     ost", "origin", "class", "image_path"]
+               "skill_cost", "origin", "class", "image_path"]
     )
     data['class'] = data['class'].str.split('/')
     data['image_path'] = "static/images/" + data['image_path'].fillna('')
