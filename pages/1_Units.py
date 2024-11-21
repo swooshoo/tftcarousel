@@ -7,12 +7,28 @@ from streamlit_image_select import image_select
 @st.cache_resource
 def load_data(path):
     data = pd.read_csv(
-        path, nrows=60, skiprows=1, usecols=range(14),
+        path, nrows=64, skiprows=1, usecols=range(14),
         names=["unit", "cost", "health", "armor", "magic_resist", "attack", 
                "attack_range", "attack_speed", "dps", "skill_name", 
                "skill_cost", "origin", "class", "image_path"]
     )
-    data['class'] = data['class'].str.split('/')
+    
+    # Handle 'class' if it is in string representation of a list
+    def parse_class(value):
+        if isinstance(value, str):
+            # If the string looks like a list (e.g., "[Ravenous,Shapeshifter]")
+            if value.startswith('[') and value.endswith(']'):
+                return [v.strip() for v in value[1:-1].split(',')]
+            return value.split('/')
+        return []
+    
+    data['class'] = data['class'].apply(parse_class)
+    data['origin'] = data['origin'].apply(parse_class)
+    
+    # Combine 'origin' and 'class' into a unified 'traits' list
+    data['traits'] = data.apply(lambda row: row['origin'] + row['class'], axis=1)
+    
+    # Prepare image paths
     data['image_path'] = "static/images/" + data['image_path'].fillna('')
     return data
 
@@ -51,8 +67,8 @@ def image_select_demo(data):
 
 # Main function for this page
 def main():
-    st.header("Set 12 Units: First Glance", divider="gray")
-    data = load_data("Set12Champions.csv")
+    st.header("Set 13 Units: First Glance", divider="gray")
+    data = load_data("Set13Champions.csv")
     if data is None:   
         st.write("DATA NOT FOUND")
         exit

@@ -8,25 +8,23 @@ st.set_page_config(
     page_icon="static/imagestft_icon.webp",
 )
 
-# Load data function
 def load_data(path):
     data = pd.read_csv(
-        path, nrows=60, skiprows=1, usecols=range(14),
+        path, nrows=64, skiprows=1, usecols=range(15),
         names=["unit", "cost", "health", "armor", "magic_resist", "attack", 
                "attack_range", "attack_speed", "dps", "skill_name", 
-               "skill_cost", "origin", "class","image_path"]
+               "skill_cost", "origin", "class", "image_path", "traits"]
     )
-    data['class'] = data['class'].str.split('/')  # Handle multiple classes
-    data['origin'] = data['origin'].str.split('/')  # Handle multiple origins
-    data['traits'] = data['origin'] + data['class']  # Combine into traits
     data['image_path'] = "static/images/" + data['image_path'].fillna('')
+    # Split traits into lists, need to leave this line of code in, even though I tried to change the data
+    data['traits'] = data['traits'].fillna('').apply(lambda x: [t.strip() for t in x.split(',')] if x else [])
+    
     return data
 
 # Display card for each unit
 def render_card(unit, traits, ability, image_path, stats):
-    st.markdown(f"## {unit.title()}")
+    st.markdown(f"## {unit.replace('_', ' ').title()}")
     st.image(image_path, use_container_width=False)
-    
     # Tabs for unit-specific details
     tab1, tab2, tab3, tab4 = st.tabs(["Traits", "Ability", "Stats", "Items"])
     
@@ -49,12 +47,10 @@ def render_card(unit, traits, ability, image_path, stats):
 
     # Tab 2: Display unit ability
     with tab2:
-        st.subheader("Ability")
         st.markdown(f"**Ability:** {ability}")
 
     # Tab 3: Display unit stats
     with tab3:
-        st.subheader("Stats")
         with st.container():
             column1, column2 = st.columns(2)
             column1.metric(label="HP", value=stats['health'])
@@ -63,10 +59,12 @@ def render_card(unit, traits, ability, image_path, stats):
             column2.metric(label="AS", value=stats['attack_speed'])
             column1.metric(label="AD", value=stats['attack'])
             column2.metric(label="AP", value=stats['skill_cost'])
+    with tab4:
+        st.write("Items Go Here")
 
 def main():
     # Load data
-    data = load_data("./Set12Champions.csv")
+    data = load_data("./Set13Champions.csv")
     
     cols_per_row = 3  # Number of cards per row
     for i in range(0, len(data), cols_per_row):
