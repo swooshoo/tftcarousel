@@ -46,19 +46,12 @@ def render_card(unit, cost,traits, ability, image_path, stats):
     # Tab 1: Display traits with images and names
     with tab1:
         for trait in traits:
-            trait_image_path = f"static/traits/{trait.lower()}.svg"
+            cleaned_trait = trait.lower().replace("'", "").replace("[", "").replace("]", "")
+            trait_image_path = f"static/traits/{cleaned_trait}.webp"
             if os.path.exists(trait_image_path):
-                st.markdown(
-                    f"""
-                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                        <img src="{trait_image_path}" alt="{trait}" style="width: 50px; height: auto; margin-right: 10px;">
-                        <span style="font-size: 16px;">{trait.title()}</span>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
+                st.image(trait_image_path)
             else:
-                st.write(f"Trait image not found: {trait.title()}")
+                st.write(f"Trait image not found: {trait_image_path}")
 
     # Tab 2: Display unit ability
     with tab2:
