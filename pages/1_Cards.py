@@ -22,8 +22,23 @@ def load_data(path):
     return data
 
 # Display card for each unit
-def render_card(unit, traits, ability, image_path, stats):
-    st.markdown(f"## {unit.replace('_', ' ').title()}")
+def render_card(unit, cost,traits, ability, image_path, stats):
+    unit = unit.replace(" Ranged", "")
+    # Determine the color based on the unit cost
+    if cost == 1:
+        color = "gray"
+    elif cost == 2:
+        color = "green"
+    elif cost == 3:
+        color = "blue"
+    elif cost == 4:
+        color = "violet"
+    else:
+        color = "orange"
+
+    # Display the header with the divider color
+    st.subheader(unit.replace('_', ' ').title(), divider=color)
+   
     st.image(image_path, use_container_width=False)
     # Tabs for unit-specific details
     tab1, tab2, tab3, tab4 = st.tabs(["Traits", "Ability", "Stats", "Items"])
@@ -75,6 +90,7 @@ def main():
                 with col:
                     render_card(
                         unit=row['unit'],
+                        cost=row['cost'],
                         traits=row['traits'],
                         ability=row['skill_name'],
                         image_path=row['image_path'],
