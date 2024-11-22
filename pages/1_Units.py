@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-from streamlit_image_select import image_select
 import os
 
 st.set_page_config(
@@ -54,7 +53,7 @@ def render_card(unit, cost,traits, ability, image_path, stats):
             if os.path.exists(trait_image_path):
                 with col1:
                     st.image(trait_image_path,width=50,)
-                    st.text(f"{cleaned_trait.capitalize()}")
+                    st.text(f"{cleaned_trait.title()}")
                 with col2:
                     st.caption("The Academy sponsors 3 items each game. Copies of sponsored items grant bonus max Health and Damage Amp. Academy units holding sponsored items gain double the amount, plus an additional 5% Health and Damage Amp.")
 
