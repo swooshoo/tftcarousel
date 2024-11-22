@@ -21,7 +21,7 @@ rell,2.0,800/1440/2592,40.0,40.0,55/83/139,1.0,0.7,39/58/102,Shattering Strike,1
 renata_glasc,2.0,600/1080/1944,40.0,40.0,55/83/140,1.0,0.7,39/58/103,Loyalty Program,123.0,['Chembaron'],['Visionary'],renata_glasc.png,"['Chembaron', 'Visionary']"
 sett,2.0,850/1530/2754,40.0,40.0,55/83/141,1.0,0.7,39/58/104,Facebreaker,123.0,['Rebel'],['Bruiser'],sett.png,"['Rebel', 'Bruiser']"
 tristana,2.0,550/990/1782,40.0,40.0,55/83/142,1.0,0.7,39/58/105,Draw a Bead,123.0,['Emissary'],['Artillerist'],tristana.png,"['Emissary', 'Artillerist']"
-urgot,2.0,700/1260/2268,40.0,40.0,55/83/143,1.0,0.7,39/58/106,Corrosive Charge,123.0,['Chembaron'],['Artillerist'],urgot.png,"['Chembaron', 'Artillerist']"
+urgot,2.0,700/1260/2268,40.0,40.0,55/83/143,1.0,0.7,39/58/106,Corrosive Charge,123.0,['Experiment'],"['Pit Fighter','Artillerist']",urgot.png,"['Chembaron', 'Artillerist']"
 vander,2.0,800/1440/2592,40.0,40.0,55/83/144,1.0,0.7,39/58/107,Hound of the Underground ,123.0,['Family'],['Watcher'],vander.png,"['Family', 'Watcher']"
 vladimir,2.0,800/1440/2592,40.0,40.0,55/83/145,1.0,0.7,39/58/108,Transfusion,123.0,['Black Rose'],"['Watcher', 'Sorceror']",vladimir.png,"['Black Rose', 'Watcher', 'Sorceror']"
 zeri,2.0,600/1080/1944,40.0,40.0,55/83/146,1.0,0.7,39/58/109,Living Battery,123.0,['Firelight'],['Sniper'],zeri.png,"['Firelight', 'Sniper']"

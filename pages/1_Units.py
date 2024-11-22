@@ -4,7 +4,7 @@ from streamlit_image_select import image_select
 import os
 
 st.set_page_config(
-    page_title="Cards",
+    page_title="Units",
     page_icon="static/imagestft_icon.webp",
 )
 
@@ -12,7 +12,7 @@ def load_data(path):
     data = pd.read_csv(
         path, nrows=64, skiprows=1, usecols=range(15),
         names=["unit", "cost", "health", "armor", "magic_resist", "attack", 
-               "attack_range", "attack_speed", "dps", "skill_name", 
+               "attack_range", "attack_speed", "dps", "skill_name",
                "skill_cost", "origin", "class", "image_path", "traits"]
     )
     data['image_path'] = "static/images/" + data['image_path'].fillna('')
@@ -23,7 +23,9 @@ def load_data(path):
 
 # Display card for each unit
 def render_card(unit, cost,traits, ability, image_path, stats):
-    unit = unit.replace(" Ranged", "")
+    unit = unit.replace("_", " ")
+    unit = unit.replace("Ranged", "")
+    
     # Determine the color based on the unit cost
     if cost == 1:
         color = "gray"
@@ -35,9 +37,8 @@ def render_card(unit, cost,traits, ability, image_path, stats):
         color = "violet"
     else:
         color = "orange"
-
     # Display the header with the divider color
-    st.subheader(unit.replace('_', ' ').title(), divider=color)
+    st.subheader(unit.title(), divider=color)
    
     st.image(image_path, use_container_width=False)
     # Tabs for unit-specific details
@@ -46,12 +47,20 @@ def render_card(unit, cost,traits, ability, image_path, stats):
     # Tab 1: Display traits with images and names
     with tab1:
         for trait in traits:
-            cleaned_trait = trait.lower().replace("'", "").replace("[", "").replace("]", "")
+            cleaned_trait = trait.lower().replace("'", "").replace("[", "").replace("]", "") #could optimize this somehow?
             trait_image_path = f"static/traits/{cleaned_trait}.webp"
+            col1, col2 = st.columns(2,gap="small")
+            
             if os.path.exists(trait_image_path):
-                st.image(trait_image_path)
+                with col1:
+                    st.image(trait_image_path,width=50,)
+                    st.text(f"{cleaned_trait.capitalize()}")
+                with col2:
+                    st.caption("The Academy sponsors 3 items each game. Copies of sponsored items grant bonus max Health and Damage Amp. Academy units holding sponsored items gain double the amount, plus an additional 5% Health and Damage Amp.")
+
             else:
                 st.write(f"Trait image not found: {trait_image_path}")
+        
 
     # Tab 2: Display unit ability
     with tab2:
@@ -69,7 +78,9 @@ def render_card(unit, cost,traits, ability, image_path, stats):
             column2.metric(label="AP", value=stats['skill_cost'])
     with tab4:
         st.write("Items Go Here")
-
+            
+    st.subheader(" ",divider=color) 
+    
 def main():
     # Load data
     data = load_data("./Set13Champions.csv")
