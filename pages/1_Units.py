@@ -22,8 +22,10 @@ def load_data(path):
 
 def load_traits(traits_path):
     traits = pd.read_csv(
-        traits_path, nrows = 
+        traits_path, nrows = 26, skiprows =1, usecols=range(2),
+        names=["trait","description"]
     )
+    
 
 # Display card for each unit
 def render_card(unit, cost,traits, ability, image_path, stats):
