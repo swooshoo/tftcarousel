@@ -20,6 +20,11 @@ def load_data(path):
     
     return data
 
+def load_traits(traits_path):
+    traits = pd.read_csv(
+        traits_path, nrows = 
+    )
+
 # Display card for each unit
 def render_card(unit, cost,traits, ability, image_path, stats):
     unit = unit.replace("_", " ")
