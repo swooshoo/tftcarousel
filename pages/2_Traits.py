@@ -4,7 +4,7 @@ import os
 
 st.set_page_config(
         page_title="Traits",
-        page_icon="static/imagestft_icon.webp",
+        page_icon="static/tft_icon.png",
     )
 
 def load_traits(traits_path):
