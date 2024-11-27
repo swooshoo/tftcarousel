@@ -20,15 +20,15 @@ def load_data(path):
     
     return data
 
-def load_traits(traits_path):
-    traits = pd.read_csv(
-        traits_path, nrows = 26, skiprows =1, usecols=range(2),
-        names=["trait","description"]
-    )
+# def load_traits(traits_path):
+#     traits = pd.read_csv(
+#         traits_path, nrows = 26, skiprows =1, usecols=range(2),
+#         names=["trait","description"]
+#     )
     
 
 # Display card for each unit
-def render_card(unit, cost,traits, ability, image_path, stats):
+def render_unit(unit, cost,traits, ability, image_path, stats):
     unit = unit.replace("_", " ")
     unit = unit.replace("Ranged", "")
     
@@ -98,7 +98,7 @@ def main():
             if i + j < len(data):  # Ensure no out-of-bounds access
                 row = data.iloc[i + j]
                 with col:
-                    render_card(
+                    render_unit(
                         unit=row['unit'],
                         cost=row['cost'],
                         traits=row['traits'],
