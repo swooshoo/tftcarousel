@@ -40,7 +40,7 @@ def render_trait(trait, description):
 
 # Main function for this page
 def main():
-    traits = load_traits(".\Traits.csv")
+    traits = load_traits(".\traits.csv")
 
     cols_per_row = 2  # Number of cards per row
     for i in range(0, len(traits), cols_per_row):
