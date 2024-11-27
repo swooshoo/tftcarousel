@@ -5,6 +5,10 @@ import pandas as pd
 st.title("TFT Carousel")
 st.text("An introduction for anyone curious about the game!")
 
+st.set_page_config(
+    page_title="TFT Carousel",
+    page_icon="static/tft_icon.png",
+) 
 st.markdown(
 
     '''
