@@ -3,9 +3,23 @@ import pandas as pd
 import os
 
 st.set_page_config(
-        page_title="Traits",
-        page_icon="static/tft_icon.png",
-    )
+    page_title="Traits",
+    page_icon="static/tft_icon.png",
+)
+
+def legend():
+    st.sidebar.header("Legend")
+    col1, col2 = st.sidebar.columns(2,gap="small")
+    with col1:
+        st.markdown(''':red[AD] | Attack Damage''')
+        st.markdown(''':blue[AP] | Ability Power''') 
+        st.markdown(''':green[HP] | Health''')
+        st.markdown(''':gray[DA] | Damage Amp''')         
+    with col2:
+        st.markdown(''':orange[AR] | Armor''')
+        st.markdown(''':violet[MR] | Magic Resist''')
+        st.markdown(''':orange[AS] | Attack Speed''')
+        st.markdown(''':gray[DR] | Durability''')
 
 def load_traits(traits_path):
     traits = pd.read_csv(
@@ -13,6 +27,7 @@ def load_traits(traits_path):
         names=["trait","description"]
     )
     return traits
+
 
 def format_description(description):
     """
@@ -41,7 +56,8 @@ def render_trait(trait, description):
 # Main function for this page
 def main():
     traits = load_traits("traits.csv")
-
+    legend()
+    st.header("Set 13 Traits")
     cols_per_row = 2  # Number of cards per row
     for i in range(0, len(traits), cols_per_row):
         cols = st.columns(cols_per_row)  # Create columns for each row

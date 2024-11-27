@@ -5,3 +5,10 @@ import pandas as pd
 st.title("TFT Carousel")
 st.text("An introduction for anyone curious about the game!")
 
+st.markdown(
+
+    '''
+    :wrench: This page is still under production! :wrench:
+
+    '''
+)

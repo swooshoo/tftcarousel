@@ -18,6 +18,19 @@ def load_data(path):
     data['traits'] = data['traits'].fillna('').apply(lambda x: [t.strip() for t in x.split(',')] if x else [])
     
     return data
+def legend():
+    st.sidebar.header("Legend")
+    col1, col2 = st.sidebar.columns(2,gap="small")
+    with col1:
+        st.markdown(''':red[AD] | Attack Damage''')
+        st.markdown(''':blue[AP] | Ability Power''') 
+        st.markdown(''':green[HP] | Health''')
+        st.markdown(''':gray[DA] | Damage Amp''')         
+    with col2:
+        st.markdown(''':orange[AR] | Armor''')
+        st.markdown(''':violet[MR] | Magic Resist''')
+        st.markdown(''':orange[AS] | Attack Speed''')
+        st.markdown(''':gray[DR] | Durability''')
 
 def load_traits(traits_path):
     trait_data = pd.read_csv(traits_path)
@@ -60,7 +73,10 @@ def render_unit(unit, cost, traits, ability, image_path, stats, trait_descriptio
     # Tab 2: Display unit ability
     with tab2:
         st.markdown(f"**Ability:** {ability}")
-
+        st.markdown(
+            '''
+            :wrench: This page is still under production! :wrench:
+            ''')
     # Tab 3: Display unit stats
     with tab3:
         with st.container():
@@ -72,7 +88,10 @@ def render_unit(unit, cost, traits, ability, image_path, stats, trait_descriptio
             column1.metric(label="AD", value=stats['attack'])
             column2.metric(label="AP", value=stats['skill_cost'])
     with tab4: 
-        st.write("Items Go Here")
+        st.markdown(
+            '''
+            :wrench: This page is still under production! :wrench:
+            ''')
             
     st.subheader(" ",divider=color) 
     
@@ -80,20 +99,8 @@ def main():
     # Load data
     data = load_data("./Set13Champions.csv")
     trait_description_map = load_traits("traits.csv")
-    st.sidebar.header("How to Use This Page")
-    col1, col2 = st.sidebar.columns(2,gap="small")
-    with col1:
-        st.markdown(''':red[AD] | Attack Damage''')
-        st.markdown(''':blue[AP] | Ability Power''') 
-        st.markdown(''':green[HP] | Health''')
-        st.markdown(''':gray[DA] | Damage Amp''')         
-    with col2:
-        st.markdown(''':orange[AR] | Armor''')
-        st.markdown(''':violet[MR] | Magic Resist''')
-        st.markdown(''':orange[AS] | Attack Speed''')
-        st.markdown(''':gray[DR] | Durability''')
-        
-
+    legend()
+    st.header("Set 13 Units")
     cols_per_row = 3  # Number of cards per row
     for i in range(0, len(data), cols_per_row):
         cols = st.columns(cols_per_row)  # Create columns for each row
