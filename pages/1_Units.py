@@ -8,10 +8,10 @@ st.set_page_config(
 )
 def load_data(path):
     data = pd.read_csv(
-        path, nrows=64, skiprows=1, usecols=range(15),
+        path, nrows=64, skiprows=1, usecols=range(16),
         names=["unit", "cost", "health", "armor", "magic_resist", "attack", 
                "attack_range", "attack_speed", "dps", "skill_name",
-               "skill_cost", "origin", "class", "image_path", "traits"]
+               "skill_cost", "origin", "class", "image_path", "traits", "role"]
     )
     data['image_path'] = "static/images/" + data['image_path'].fillna('')
     # Split traits into lists, need to leave this line of code in, even though I tried to change the data
@@ -39,7 +39,7 @@ def load_traits(traits_path):
     return trait_description_map
     
 # Display card for each unit
-def render_unit(unit, cost, traits, ability, image_path, stats, trait_description_map):
+def render_unit(unit, cost, traits, ability, image_path, stats, trait_description_map, role):
     unit = unit.replace("_", " ")
     unit = unit.replace("Ranged", "")
     
@@ -72,6 +72,7 @@ def render_unit(unit, cost, traits, ability, image_path, stats, trait_descriptio
   
     # Tab 2: Display unit ability
     with tab2:
+        st.markdown(f"**Role:**{role}")
         st.markdown(f"**Ability:** {ability}")
         st.markdown(
             '''
@@ -88,6 +89,7 @@ def render_unit(unit, cost, traits, ability, image_path, stats, trait_descriptio
             column1.metric(label="AD", value=stats['attack'])
             column2.metric(label="AP", value=stats['skill_cost'])
     with tab4: 
+        st.markdown(f"**Role:**{role}")
         st.markdown(
             '''
             :wrench: This page is still under production! :wrench:
@@ -116,6 +118,7 @@ def main():
                         image_path=row['image_path'],
                         stats=row[["health", "armor", "magic_resist", "attack_speed", "attack", "skill_cost"]].to_dict(),
                         trait_description_map=trait_description_map,
+                        role=row['role']
                     )
     
 
