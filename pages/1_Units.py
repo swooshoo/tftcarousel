@@ -31,21 +31,36 @@ def legend():
         st.markdown(''':violet[MR] | Magic Resist''')
         st.markdown(''':orange[AS] | Attack Speed''')
         st.markdown(''':gray[DR] | Durability''')
-
+        
+    with st.sidebar.expander("What do these terms mean?"):
+        st.markdown(':red[AD] is base physical damage dealt with normal attacks, and is a key stat for champions who rely on consistent basic attacks to deal damage.')
+        st.markdown(':blue[AP] is base magic damage dealt with abilities, and is a key stat for champions who rely on ability casts to deal damage.')
+        st.markdown(''':green[HP] is base health points, and determines how much damage a unit can take in flat numbers. HP is prioritized on tankier frontline units.''')
+        st.markdown(''':gray[DA] is damage amplification, and increases the total output of a unit by a percent value. For instance, a unit with 12% :gray[DA] whose ability does 100 base damage will do 112 damage.''')  
+        st.markdown(''':orange[AR] is armor, and is the physical defense stat that nullifies physical damage dealt against it. It is calculated by :orange[AR]/(100 + :orange[AR]).''')
+        st.markdown(''':violet[MR] is magic resist, and is the magic defense stat that nullifies magic damage dealt against it. It is calculated by :violet[MR]/(100 + :violet[MR]).''')
+        st.markdown(''':orange[AS] is attack speed, and represents the number of auto-attacks per second. This is capped at 5.00, or five attacks per second.''')
+        st.markdown(''':gray[DR] is Durability, and represents a unit's percent reduction in damage taken after :orange[AR] and :violet[MR] calculations.''')
 def load_traits(traits_path):
     trait_data = pd.read_csv(traits_path)
     # Create a dictionary mapping traits to descriptions
     trait_description_map = trait_data.set_index('trait')['description'].to_dict()
     return trait_description_map
+
+# def load_skills(skills_path):
+#     skill_data = pd.read_csv(skills_path)
+#     #Create a dictionary mapping skill names to skill descriptions
+#     skill_desc_map = skill_data.set_index('skill_name')['skill_desc'].to_dict()
+#     return skill_desc_map
     
 # Display card for each unit
-def render_unit(unit, cost, traits, ability, image_path, stats, trait_description_map, role):
+def render_unit(unit, cost, traits, ability, image_path, stats, trait_description_map,role):
     unit = unit.replace("_", " ")
     unit = unit.replace("Ranged", "")
     
     # Determine the color based on the unit cost
     color_map = {1: "gray", 2: "green", 3: "blue", 4: "violet", 5: "orange"}
-    color = color_map.get(cost, "gray")
+    color = color_map.get(cost, "gray") 
     # Display the header with the divider color
     st.subheader(unit.title(), divider=color)
    
@@ -66,13 +81,13 @@ def render_unit(unit, cost, traits, ability, image_path, stats, trait_descriptio
                     st.write(f"Trait image not found: {trait_image_path}")  
             with col2:
                 st.write(f"{cleaned_trait.title()}")
-            description = trait_description_map.get(cleaned_trait.replace(" ","_"), "No description available.")
-            formatted_desc = description.replace("   ", "  \n")
-            st.markdown(formatted_desc)    
+            trait_desc = trait_description_map.get(cleaned_trait.replace(" ","_"), "No description available.")
+            formatted_traitdesc = trait_desc.replace("   ", "  \n")
+            st.markdown(formatted_traitdesc)   
   
     # Tab 2: Display unit ability
     with tab2:
-        st.markdown(f"**Role:**{role}")
+        st.markdown(f"**Role:** {role}")
         st.markdown(f"**Ability:** {ability}")
         st.markdown(
             '''
@@ -81,6 +96,7 @@ def render_unit(unit, cost, traits, ability, image_path, stats, trait_descriptio
     # Tab 3: Display unit stats
     with tab3:
         with st.container():
+            st.metric(label="HP", value=stats['health'])
             column1, column2 = st.columns(2)
             column1.metric(label="HP", value=stats['health'])
             column2.metric(label="Armor", value=stats['armor'])
@@ -88,8 +104,9 @@ def render_unit(unit, cost, traits, ability, image_path, stats, trait_descriptio
             column2.metric(label="AS", value=stats['attack_speed'])
             column1.metric(label="AD", value=stats['attack'])
             column2.metric(label="AP", value=stats['skill_cost'])
+            
     with tab4: 
-        st.markdown(f"**Role:**{role}")
+        st.markdown(f"**Role:** {role}")
         st.markdown(
             '''
             :wrench: This page is still under production! :wrench:
@@ -101,6 +118,7 @@ def main():
     # Load data
     data = load_data("./Set13Champions.csv")
     trait_description_map = load_traits("traits.csv")
+    #skill_desc_map = load_skills("skills.csv")
     legend()
     st.header("Set 13 Units")
     cols_per_row = 3  # Number of cards per row
