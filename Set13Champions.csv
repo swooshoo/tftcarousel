@@ -1,65 +1,65 @@
 unit,cost,health,armor,magic_resist,attack_damage,attack_range,speed_of_attack,dps,skill_name,skill_cost,origin,class,image_path,traits,role
-amumu,1.0,600/1080/1944,35.0,35.0,45/68/101,1.0,0.6,27/41/61,Obsolete Technology,0,['Automata'],['Watcher'],amumu.png,"['Automata', 'Watcher']",Magic Tank
-darius,1.0,650/1170/2106,40.0,40.0,55/83/124,1.0,0.7,39/58/87,Decimate,30/70,['Conqueror'],['Watcher'],darius.png,"['Conqueror', 'Watcher']",Attack Tank
-draven,1.0,500/900/1620,35.0,35.0,45/68/101,1.0,0.6,27/41/61,Spinning Axes,30/60,['Conqueror'],['Pit Fighter'],draven.png,"['Conqueror', 'Pit Fighter']",Attack Carry
-irelia,1.0,700/1260/2268,40.0,40.0,55/83/124,1.0,0.7,39/58/87,Defiant Dance,30/70,['Rebel'],['Sentinel'],irelia.png,"['Rebel', 'Sentinel']", Magic Tank
-lux,1.0,500/900/1620,40.0,40.0,55/83/125,1.0,0.7,39/58/88,Prismatic Barrier,0/50,['Academy'],['Sorceror'],lux.png,"['Academy', 'Sorceror']", Magic Caster
-maddie,1.0,500/900/1620,40.0,40.0,55/83/126,1.0,0.7,39/58/89,Fan the Hammer,20/120,['Enforcer'],['Sniper'],maddie.png,"['Enforcer', 'Sniper']", Attack Caster
-morgana,1.0,500/900/1620,40.0,40.0,55/83/127,1.0,0.7,39/58/90,Tormented Soul,0/40,['Black Rose'],['Visionary'],morgana.png,"['Black Rose', 'Visionary']", Magic Caster
-powder,1.0,500/900/1620,40.0,40.0,55/83/128,1.0,0.7,39/58/91,Misfit Toy,40/120,"['Family', 'Scrap']",['Ambusher'],powder.png,"['Family', 'Scrap', 'Ambusher']", Magic Caster
-singed,1.0,650/1170/2106,40.0,40.0,55/83/129,1.0,0.7,39/58/92,Dangerous Mutations,0/50,['Chembaron'],['Sentinel'],singed.png,"['Chembaron', 'Sentinel']",Magic Tank
-steb,1.0,650/1170/2106,40.0,40.0,55/83/130,1.0,0.7,39/58/93,Field Medicine,30/90,['Enforcer'],['Bruiser'],steb.png,"['Enforcer', 'Bruiser']", Magic Tank
-trundle,1.0,650/1170/2106,40.0,40.0,55/83/131,1.0,0.7,39/58/94,Desperate Chomp,30/90,['Scrap'],['Bruiser'],trundle.png,"['Scrap', 'Bruiser']", Attack Tank
-vex,1.0,450/810/1458,40.0,40.0,55/83/132,1.0,0.7,39/58/95,Looming Darkness,0/60,['Rebel'],['Visionary'],vex.png,"['Rebel', 'Visionary']", Magic Caster
-violet,1.0,650/1170/2106,40.0,40.0,55/83/133,1.0,0.7,39/58/96,1-2-3 Combo,20/90,['Family'],['Pit Fighter'],violet.png,"['Family', 'Pit Fighter']", Attack Fighter
-zyra,1.0,500/900/1620,40.0,40.0,55/83/134,1.0,0.7,39/58/97,Grasping Roots,10/60,['Experiment'],['Sorceror'],zyra.png,"['Experiment', 'Sorceror']", Magic Caster
-akali,2.0,700/1260/2268,40.0,40.0,55/83/135,1.0,0.7,39/58/98,Shuriken Flip,0/60,['Rebel'],['Quickstriker'],akali.png,"['Rebel', 'Quickstriker']", Magic Reaper
-camille,2.0,700/1260/2268,40.0,40.0,55/83/136,1.0,0.7,39/58/99,Adaptive Strike,0/25,['Enforcer'],['Ambusher'],camille.png,"['Enforcer', 'Ambusher']", Attack Fighter
-leona,2.0,800/1440/2592,40.0,40.0,55/83/137,1.0,0.7,39/58/100,Eclipse,50/90,['Academy'],['Sentinel'],leona.png,"['Academy', 'Sentinel']", Magic Tank
-nocturne,2.0,700/1260/2268,40.0,40.0,55/83/138,1.0,0.7,39/58/101,Overdrive Blades,0/40,['Automata'],['Quickstriker'],nocturne.png,"['Automata', 'Quickstriker']", Attack Reaper
-rell,2.0,800/1440/2592,40.0,40.0,55/83/139,1.0,0.7,39/58/102,Shattering Strike,40/90,['Conqueror'],"['Sentinel', 'Visionary']",rell.png,"['Conqueror', 'Sentinel', 'Visionary']", Magic Tank
-renata_glasc,2.0,600/1080/1944,40.0,40.0,55/83/140,1.0,0.7,39/58/103,Loyalty Program,20/80,['Chembaron'],['Visionary'],renata_glasc.png,"['Chembaron', 'Visionary']", Magic Caster
-sett,2.0,850/1530/2754,40.0,40.0,55/83/141,1.0,0.7,39/58/104,Facebreaker,50/100,['Rebel'],['Bruiser'],sett.png,"['Rebel', 'Bruiser']", Magic Tank
-tristana,2.0,550/990/1782,40.0,40.0,55/83/142,1.0,0.7,39/58/105,Draw a Bead,20/60,['Emissary'],['Artillerist'],tristana.png,"['Emissary', 'Artillerist']", Attack Carry
-urgot,2.0,700/1260/2268,40.0,40.0,55/83/143,1.0,0.7,39/58/106,Corrosive Charge,20/70,['Experiment'],"['Pit Fighter','Artillerist']",urgot.png,"['Experiment', 'Pit Fighter', 'Artillerist']", Attack Fighter
-vander,2.0,800/1440/2592,40.0,40.0,55/83/144,1.0,0.7,39/58/107,Hound of the Underground ,0/50,['Family'],['Watcher'],vander.png,"['Family', 'Watcher']", Attack Tank
-vladimir,2.0,800/1440/2592,40.0,40.0,55/83/145,1.0,0.7,39/58/108,Transfusion,0/65,['Black Rose'],"['Watcher', 'Sorceror']",vladimir.png,"['Black Rose', 'Watcher', 'Sorceror']", Magic Tank
-zeri,2.0,600/1080/1944,40.0,40.0,55/83/146,1.0,0.7,39/58/109,Living Battery,0,['Firelight'],['Sniper'],zeri.png,"['Firelight', 'Sniper']", Attack Carry
-ziggs,2.0,600/1080/1944,40.0,40.0,55/83/147,1.0,0.7,39/58/110,Bomb Full of Bombs,15/60,['Scrap'],['Dominator'],ziggs.png,"['Scrap', 'Dominator']", Magic Caster
-blitzcrank,3.0,850/1530/2754,40.0,40.0,55/83/148,1.0,0.7,39/58/111,Static Field,20/70,['Automata'],['Dominator'],blitzcrank.png,"['Automata', 'Dominator']", Magic Tank
-cassiopeia,3.0,700/1260/2268,40.0,40.0,55/83/149,1.0,0.7,39/58/112,Thorned Miasma,10/40,['Black Rose'],['Dominator'],cassiopeia.png,"['Black Rose', 'Dominator']", Magic Caster
-ezreal,3.0,700/1260/2268,40.0,40.0,55/83/150,1.0,0.7,39/58/113,Essence Flux,0/60,"['Academy', 'Rebel']",['Artillerist'],ezreal.png,"['Academy', 'Rebel', 'Artillerist']", Attack Caster
-gangplank,3.0,800/1440/2592,40.0,40.0,55/83/151,1.0,0.7,39/58/114,Harvest from Flames,0/60,['Scrap'],"['Form Swapper', 'Pit Fighter']",gangplank.png,"['Scrap', 'Form Swapper', 'Pit Fighter']", Attack Fighter
-gangplank_ranged,3.0,700/1260/2268,40.0,40.0,55/83/152,1.0,0.7,39/58/115,Sticky Bombs,0/75,['Scrap'],"['Form Swapper', 'Pit Fighter']",gangplank_ranged.png,"['Scrap', 'Form Swapper', 'Pit Fighter']", Attack Caster
-kogmaw,3.0,650/1170/2106,40.0,40.0,55/83/153,1.0,0.7,39/58/116,Upgrading Barrage Module,0/40,['Automata'],['Sniper'],kogmaw.png,"['Automata', 'Sniper']", Magic Carry
-loris,3.0,850/1530/2754,40.0,40.0,55/83/154,1.0,0.7,39/58/117,Piltover Bulwark,50/100,['Enforcer'],['Sentinel'],loris.png,"['Enforcer', 'Sentinel']", Magic Tank
-nami,3.0,700/1260/2268,40.0,40.0,55/83/155,1.0,0.7,39/58/118,Ocean's Ebb,0/60,['Emissary'],['Sorceror'],nami.png,"['Emissary', 'Sorceror']", Magic Caster
-nunu_and_willump,3.0,800/1440/2592,40.0,40.0,55/83/156,1.0,0.7,39/58/119,ZOMBIE POWER!!,60/125,['Experiment'],"['Bruiser', 'Visionary']",nunu_and_willump.png,"['Experiment', 'Bruiser', 'Visionary']", Magic Tank
-renni,3.0,850/1530/2754,40.0,40.0,55/83/157,1.0,0.7,39/58/120,Sludgerunner's Smash,40/100,['Chembaron'],['Bruiser'],renni.png,"['Chembaron', 'Bruiser']", Attack Tank
-scar,3.0,850/1530/2754,40.0,40.0,55/83/158,1.0,0.7,39/58/121,Sumpsnipe Surprise,80/155,['Firelight'],['Watcher'],scar.png,"['Firelight', 'Watcher']", Magic Tank
-smeech,3.0,800/1440/2592,40.0,40.0,55/83/159,1.0,0.7,39/58/122,Scrap Hacker,20/80,['Chembaron'],['Ambusher'],smeech.png,"['Chembaron', 'Ambusher']", Attack Reaper
-swain,3.0,950/1710/3078,40.0,40.0,55/83/160,1.0,0.7,39/58/123,Demonic Ascension,40/100,['Conqueror'],"['Form Swapper', 'Sorceror']",swain.png,"['Conqueror', 'Form Swapper', 'Sorceror']", Magic Tank
-swain_ranged,3.0,650/1170/2106,40.0,40.0,55/83/161,1.0,0.7,39/58/124,Murder of Crows,20/70,['Conqueror'],"['Form Swapper', 'Sorceror']",swain_ranged.png,"['Conqueror', 'Form Swapper', 'Sorceror']", Magic Caster
-twisted_fate,3.0,700/1260/2268,40.0,40.0,55/83/162,1.0,0.7,39/58/125,Wild Cards,25/75,['Enforcer'],['Quickstriker'],twisted_fate.png,"['Enforcer', 'Quickstriker']", Magic Caster
-ambessa,4.0,1100/1980/3564,40.0,40.0,55/83/163,1.0,0.7,39/58/126,Unrelenting Huntress,40/100,"['Emissary', 'Conqueror']",['Quickstriker'],ambessa.png,"['Emissary', 'Conqueror', 'Quickstriker']", Attack Fighter
-corki,4.0,850/1530/2754,40.0,40.0,55/83/164,1.0,0.7,39/58/127,Broadside Barrage,0/60,['Scrap'],['Artillerist'],corki.png,"['Scrap', 'Artillerist']", Attack Caster
-dr_mundo,4.0,1100/1980/3564,40.0,40.0,55/83/165,1.0,0.7,39/58/128,Maximum Dosage,30/100,['Experiment'],['Dominator'],mundo.png,"['Experiment', 'Dominator']", Magic Tank
-ekko,4.0,1100/1980/3564,40.0,40.0,55/83/166,1.0,0.7,39/58/129,Splitting Seconds,30/60,"['Firelight', 'Scrap']",['Ambusher'],ekko.png,"['Firelight', 'Scrap', 'Ambusher']", Magic Reaper
-elise,4.0,1100/1980/3564,40.0,40.0,55/83/167,1.0,0.7,39/58/130,Cocoon,50/160,['Black Rose'],"['Form Swapper', 'Bruiser']",elise.png,"['Black Rose', 'Form Swapper', 'Bruiser']", Magic Tank
-elise_ranged,4.0,750/1350/2430,40.0,40.0,55/83/168,1.0,0.7,39/58/131,Volatile Spiderlings,20/80,['Black Rose'],"['Form Swapper', 'Bruiser']",elise_ranged.png,"['Black Rose', 'Form Swapper', 'Bruiser']", Magic Caster
-garen,4.0,1000/1800/3240,40.0,40.0,55/83/169,1.0,0.7,39/58/132,Demacian Justice,60/125,['Emissary'],['Watcher'],garen.png,"['Emissary', 'Watcher']", Attack Tank
-heimerdinger,4.0,800/1440/2592,40.0,40.0,55/83/170,1.0,0.7,39/58/133,PROGRESSSSS!,0/40,['Academy'],['Visionary'],heimerdinger.png,"['Academy', 'Visionary']", Magic Caster 
-illaoi,4.0,1100/1980/3564,40.0,40.0,55/83/171,1.0,0.7,39/58/134,Test of Spirit,65/125,['Rebel'],['Sentinel'],illaoi.png,"['Rebel', 'Sentinel']", Magic Tank
-silco,4.0,800/1440/2592,40.0,40.0,55/83/172,1.0,0.7,39/58/135,Canned Monstrosity,30/80,['Chembaron'],['Dominator'],silco.png,"['Chembaron', 'Dominator']", Magic Caster
-twitch,4.0,800/1440/2592,40.0,40.0,55/83/173,1.0,0.7,39/58/136,Spray and Pray,0/60,['Experiment'],['Sniper'],twitch.png,"['Experiment', 'Sniper']", Attack Carry
-vi,4.0,1100/1980/3564,40.0,40.0,55/83/174,1.0,0.7,39/58/137,Wrecking Crew,40/100,['Enforcer'],['Pit Fighter'],vi.png,"['Enforcer', 'Pit Fighter']", Attack Fighter
-zoe,4.0,800/1440/2592,40.0,40.0,55/83/175,1.0,0.7,39/58/138,Paddle Star!,20/80,['Rebel'],['Sorceror'],zoe.png,"['Rebel', 'Sorceror']", Magic Caster
-caitlyn,5.0,900/1620/2916,40.0,40.0,55/83/176,1.0,0.7,39/58/139,Air Raid,0/50,['Enforcer'],['Sniper'],caitlyn.png,"['Enforcer', 'Sniper']", Attack Caster
-jayce,5.0,1200/2160/3888,40.0,40.0,55/83/177,1.0,0.7,39/58/140,Special Delivery,30/80,['Academy'],['Form Swapper'],jayce.png,"['Academy', 'Form Swapper']", Attack Fighter
-jayce_ranged,5.0,900/1620/2916,40.0,40.0,55/83/178,1.0,0.7,39/58/141,Hexcrystal Destruction,15/65,['Academy'],['Form Swapper'],jayce_ranged.png,"['Academy', 'Form Swapper']", Attack Caster
-jinx,5.0,900/1620/2916,40.0,40.0,55/83/179,1.0,0.7,39/58/142,Ruin Everything ,0/60,['Rebel'],['Ambusher'],jinx.png,"['Rebel', 'Ambusher']", Attack Caster
-leblanc,5.0,900/1620/2916,40.0,40.0,55/83/180,1.0,0.7,39/58/143,The Chains of Fate,45/90,['Black Rose'],['Sorceror'],leblanc.png,"['Black Rose', 'Sorceror']", Magic Caster
-malzahar,5.0,950/1710/3078,40.0,40.0,55/83/181,1.0,0.7,39/58/144,Call of the Machine,30/90,['Automata'],['Visionary'],malzahar.png,"['Automata', 'Visionary']", Magic Caster
-mordekaiser,5.0,1200/2160/3888,40.0,40.0,55/83/182,1.0,0.7,39/58/145,Grasp of the Iron Revenant,25/100,['Conqueror'],['Dominator'],mordekaiser.png,"['Conqueror', 'Dominator']", Magic Fighter
-rumble,5.0,1200/2160/3888,40.0,40.0,55/83/183,1.0,0.7,39/58/146,The Equalizer,40/120,"['Junker King', 'Scrap']",['Sentinel'],rumble.png,"['Junker King', 'Scrap', 'Sentinel']", Magic Fighter
-sevika,5.0,1200/2160/3888,40.0,40.0,55/83/184,1.0,0.7,39/58/147,Beat the Odds,0/60,"['High Roller', 'Chembaron']",['Pit Fighter'],sevika.png,"['High Roller', 'Chembaron', 'Pit Fighter']", Attack Fighter
+amumu,1.0,600/1080/1944,35.0,35.0,45/68/101,1.0,0.6,27/41/61,Obsolete Technology,123,"['[""[\'Automata\']""]']","['[""[\'Watcher\']""]']",amumu.png,"['[""[\'Automata\']""]', '[""[\'Watcher\']""]']",Magic Tank
+darius,1.0,650/1170/2106,40.0,40.0,55/83/124,1.0,0.7,39/58/87,Decimate,123,"['[""[\'Conqueror\']""]']","['[""[\'Watcher\']""]']",darius.png,"['[""[\'Conqueror\']""]', '[""[\'Watcher\']""]']",Attack Tank
+draven,1.0,500/900/1620,35.0,35.0,45/68/101,1.0,0.6,27/41/61,Spinning Axes,123,"['[""[\'Conqueror\']""]']","['[""[\'Pit Fighter\']""]']",draven.png,"['[""[\'Conqueror\']""]', '[""[\'Pit Fighter\']""]']",Attack Carry
+irelia,1.0,700/1260/2268,40.0,40.0,55/83/124,1.0,0.7,39/58/87,Defiant Dance,123,"['[""[\'Rebel\']""]']","['[""[\'Sentinel\']""]']",irelia.png,"['[""[\'Rebel\']""]', '[""[\'Sentinel\']""]']", Magic Tank
+lux,1.0,500/900/1620,40.0,40.0,55/83/125,1.0,0.7,39/58/88,Prismatic Barrier,123,"['[""[\'Academy\']""]']","['[""[\'Sorceror\']""]']",lux.png,"['[""[\'Academy\']""]', '[""[\'Sorceror\']""]']", Magic Caster
+maddie,1.0,500/900/1620,40.0,40.0,55/83/126,1.0,0.7,39/58/89,Fan the Hammer,123,"['[""[\'Enforcer\']""]']","['[""[\'Sniper\']""]']",maddie.png,"['[""[\'Enforcer\']""]', '[""[\'Sniper\']""]']", Attack Caster
+morgana,1.0,500/900/1620,40.0,40.0,55/83/127,1.0,0.7,39/58/90,Tormented Soul,123,"['[""[\'Black Rose\']""]']","['[""[\'Visionary\']""]']",morgana.png,"['[""[\'Black Rose\']""]', '[""[\'Visionary\']""]']", Magic Caster
+powder,1.0,500/900/1620,40.0,40.0,55/83/128,1.0,0.7,39/58/91,Misfit Toy,123,"['[""[\'Family\'""', '""\'Scrap\']""]']","['[""[\'Ambusher\']""]']",powder.png,"['[""[\'Family\'""', '""\'Scrap\']""]', '[""[\'Ambusher\']""]']", Magic Caster
+singed,1.0,650/1170/2106,40.0,40.0,55/83/129,1.0,0.7,39/58/92,Dangerous Mutations,123,"['[""[\'Chembaron\']""]']","['[""[\'Sentinel\']""]']",singed.png,"['[""[\'Chembaron\']""]', '[""[\'Sentinel\']""]']",Magic Tank
+steb,1.0,650/1170/2106,40.0,40.0,55/83/130,1.0,0.7,39/58/93,Field Medicine,123,"['[""[\'Enforcer\']""]']","['[""[\'Bruiser\']""]']",steb.png,"['[""[\'Enforcer\']""]', '[""[\'Bruiser\']""]']", Magic Tank
+trundle,1.0,650/1170/2106,40.0,40.0,55/83/131,1.0,0.7,39/58/94,Desperate Chomp,123,"['[""[\'Scrap\']""]']","['[""[\'Bruiser\']""]']",trundle.png,"['[""[\'Scrap\']""]', '[""[\'Bruiser\']""]']", Attack Tank
+vex,1.0,450/810/1458,40.0,40.0,55/83/132,1.0,0.7,39/58/95,Looming Darkness,123,"['[""[\'Rebel\']""]']","['[""[\'Visionary\']""]']",vex.png,"['[""[\'Rebel\']""]', '[""[\'Visionary\']""]']", Magic Caster
+violet,1.0,650/1170/2106,40.0,40.0,55/83/133,1.0,0.7,39/58/96,1-2-3 Combo,123,"['[""[\'Family\']""]']","['[""[\'Pit Fighter\']""]']",violet.png,"['[""[\'Family\']""]', '[""[\'Pit Fighter\']""]']", Attack Fighter
+zyra,1.0,500/900/1620,40.0,40.0,55/83/134,1.0,0.7,39/58/97,Grasping Roots,123,"['[""[\'Experiment\']""]']","['[""[\'Sorceror\']""]']",zyra.png,"['[""[\'Experiment\']""]', '[""[\'Sorceror\']""]']", Magic Caster
+akali,2.0,700/1260/2268,40.0,40.0,55/83/135,1.0,0.7,39/58/98,Shuriken Flip,123,"['[""[\'Rebel\']""]']","['[""[\'Quickstriker\']""]']",akali.png,"['[""[\'Rebel\']""]', '[""[\'Quickstriker\']""]']", Magic Reaper
+camille,2.0,700/1260/2268,40.0,40.0,55/83/136,1.0,0.7,39/58/99,Adaptive Strike,123,"['[""[\'Enforcer\']""]']","['[""[\'Ambusher\']""]']",camille.png,"['[""[\'Enforcer\']""]', '[""[\'Ambusher\']""]']", Attack Fighter
+leona,2.0,800/1440/2592,40.0,40.0,55/83/137,1.0,0.7,39/58/100,Eclipse,123,"['[""[\'Academy\']""]']","['[""[\'Sentinel\']""]']",leona.png,"['[""[\'Academy\']""]', '[""[\'Sentinel\']""]']", Magic Tank
+nocturne,2.0,700/1260/2268,40.0,40.0,55/83/138,1.0,0.7,39/58/101,Overdrive Blades,123,"['[""[\'Automata\']""]']","['[""[\'Quickstriker\']""]']",nocturne.png,"['[""[\'Automata\']""]', '[""[\'Quickstriker\']""]']", Attack Reaper
+rell,2.0,800/1440/2592,40.0,40.0,55/83/139,1.0,0.7,39/58/102,Shattering Strike,123,"['[""[\'Conqueror\']""]']","['[""[\'Sentinel\'""', '""\'Visionary\']""]']",rell.png,"['[""[\'Conqueror\']""]', '[""[\'Sentinel\'""', '""\'Visionary\']""]']", Magic Tank
+renata_glasc,2.0,600/1080/1944,40.0,40.0,55/83/140,1.0,0.7,39/58/103,Loyalty Program,123,"['[""[\'Chembaron\']""]']","['[""[\'Visionary\']""]']",renata_glasc.png,"['[""[\'Chembaron\']""]', '[""[\'Visionary\']""]']", Magic Caster
+sett,2.0,850/1530/2754,40.0,40.0,55/83/141,1.0,0.7,39/58/104,Facebreaker,123,"['[""[\'Rebel\']""]']","['[""[\'Bruiser\']""]']",sett.png,"['[""[\'Rebel\']""]', '[""[\'Bruiser\']""]']", Magic Tank
+tristana,2.0,550/990/1782,40.0,40.0,55/83/142,1.0,0.7,39/58/105,Draw a Bead,123,"['[""[\'Emissary\']""]']","['[""[\'Artillerist\']""]']",tristana.png,"['[""[\'Emissary\']""]', '[""[\'Artillerist\']""]']", Attack Carry
+urgot,2.0,700/1260/2268,40.0,40.0,55/83/143,1.0,0.7,39/58/106,Corrosive Charge,123,"['[""[\'Experiment\']""]']","['[""[\'Pit Fighter\'""', '""\'Artillerist\']""]']",urgot.png,"['[""[\'Experiment\']""]', '[""[\'Pit Fighter\'""', '""\'Artillerist\']""]']", Attack Fighter
+vander,2.0,800/1440/2592,40.0,40.0,55/83/144,1.0,0.7,39/58/107,Hound of the Underground ,123,"['[""[\'Family\']""]']","['[""[\'Watcher\']""]']",vander.png,"['[""[\'Family\']""]', '[""[\'Watcher\']""]']", Attack Tank
+vladimir,2.0,800/1440/2592,40.0,40.0,55/83/145,1.0,0.7,39/58/108,Transfusion,123,"['[""[\'Black Rose\']""]']","['[""[\'Watcher\'""', '""\'Sorceror\']""]']",vladimir.png,"['[""[\'Black Rose\']""]', '[""[\'Watcher\'""', '""\'Sorceror\']""]']", Magic Tank
+zeri,2.0,600/1080/1944,40.0,40.0,55/83/146,1.0,0.7,39/58/109,Living Battery,123,"['[""[\'Firelight\']""]']","['[""[\'Sniper\']""]']",zeri.png,"['[""[\'Firelight\']""]', '[""[\'Sniper\']""]']", Attack Carry
+ziggs,2.0,600/1080/1944,40.0,40.0,55/83/147,1.0,0.7,39/58/110,Bomb Full of Bombs,123,"['[""[\'Scrap\']""]']","['[""[\'Dominator\']""]']",ziggs.png,"['[""[\'Scrap\']""]', '[""[\'Dominator\']""]']", Magic Caster
+blitzcrank,3.0,850/1530/2754,40.0,40.0,55/83/148,1.0,0.7,39/58/111,Static Field,123,"['[""[\'Automata\']""]']","['[""[\'Dominator\']""]']",blitzcrank.png,"['[""[\'Automata\']""]', '[""[\'Dominator\']""]']", Magic Tank
+cassiopeia,3.0,700/1260/2268,40.0,40.0,55/83/149,1.0,0.7,39/58/112,Thorned Miasma,123,"['[""[\'Black Rose\']""]']","['[""[\'Dominator\']""]']",cassiopeia.png,"['[""[\'Black Rose\']""]', '[""[\'Dominator\']""]']", Magic Caster
+ezreal,3.0,700/1260/2268,40.0,40.0,55/83/150,1.0,0.7,39/58/113,Essence Flux,123,"['[""[\'Academy\'""', '""\'Rebel\']""]']","['[""[\'Artillerist\']""]']",ezreal.png,"['[""[\'Academy\'""', '""\'Rebel\']""]', '[""[\'Artillerist\']""]']", Attack Caster
+gangplank,3.0,800/1440/2592,40.0,40.0,55/83/151,1.0,0.7,39/58/114,Harvest from Flames,123,"['[""[\'Scrap\']""]']","['[""[\'Form Swapper\'""', '""\'Pit Fighter\']""]']",gangplank.png,"['[""[\'Scrap\']""]', '[""[\'Form Swapper\'""', '""\'Pit Fighter\']""]']", Attack Fighter
+gangplank_ranged,3.0,700/1260/2268,40.0,40.0,55/83/152,1.0,0.7,39/58/115,Sticky Bombs,123,"['[""[\'Scrap\']""]']","['[""[\'Form Swapper\'""', '""\'Pit Fighter\']""]']",gangplank_ranged.png,"['[""[\'Scrap\']""]', '[""[\'Form Swapper\'""', '""\'Pit Fighter\']""]']", Attack Caster
+kogmaw,3.0,650/1170/2106,40.0,40.0,55/83/153,1.0,0.7,39/58/116,Upgrading Barrage Module,123,"['[""[\'Automata\']""]']","['[""[\'Sniper\']""]']",kogmaw.png,"['[""[\'Automata\']""]', '[""[\'Sniper\']""]']", Magic Carry
+loris,3.0,850/1530/2754,40.0,40.0,55/83/154,1.0,0.7,39/58/117,Piltover Bulwark,123,"['[""[\'Enforcer\']""]']","['[""[\'Sentinel\']""]']",loris.png,"['[""[\'Enforcer\']""]', '[""[\'Sentinel\']""]']", Magic Tank
+nami,3.0,700/1260/2268,40.0,40.0,55/83/155,1.0,0.7,39/58/118,Ocean's Ebb,123,"['[""[\'Emissary\']""]']","['[""[\'Sorceror\']""]']",nami.png,"['[""[\'Emissary\']""]', '[""[\'Sorceror\']""]']", Magic Caster
+nunu_and_willump,3.0,800/1440/2592,40.0,40.0,55/83/156,1.0,0.7,39/58/119,ZOMBIE POWER!!,123,"['[""[\'Experiment\']""]']","['[""[\'Bruiser\'""', '""\'Visionary\']""]']",nunu_and_willump.png,"['[""[\'Experiment\']""]', '[""[\'Bruiser\'""', '""\'Visionary\']""]']", Magic Tank
+renni,3.0,850/1530/2754,40.0,40.0,55/83/157,1.0,0.7,39/58/120,Sludgerunner's Smash,123,"['[""[\'Chembaron\']""]']","['[""[\'Bruiser\']""]']",renni.png,"['[""[\'Chembaron\']""]', '[""[\'Bruiser\']""]']", Attack Tank
+scar,3.0,850/1530/2754,40.0,40.0,55/83/158,1.0,0.7,39/58/121,Sumpsnipe Surprise,123,"['[""[\'Firelight\']""]']","['[""[\'Watcher\']""]']",scar.png,"['[""[\'Firelight\']""]', '[""[\'Watcher\']""]']", Magic Tank
+smeech,3.0,800/1440/2592,40.0,40.0,55/83/159,1.0,0.7,39/58/122,Scrap Hacker,123,"['[""[\'Chembaron\']""]']","['[""[\'Ambusher\']""]']",smeech.png,"['[""[\'Chembaron\']""]', '[""[\'Ambusher\']""]']", Attack Reaper
+swain,3.0,950/1710/3078,40.0,40.0,55/83/160,1.0,0.7,39/58/123,Demonic Ascension,123,"['[""[\'Conqueror\']""]']","['[""[\'Form Swapper\'""', '""\'Sorceror\']""]']",swain.png,"['[""[\'Conqueror\']""]', '[""[\'Form Swapper\'""', '""\'Sorceror\']""]']", Magic Tank
+swain_ranged,3.0,650/1170/2106,40.0,40.0,55/83/161,1.0,0.7,39/58/124,Murder of Crows,123,"['[""[\'Conqueror\']""]']","['[""[\'Form Swapper\'""', '""\'Sorceror\']""]']",swain_ranged.png,"['[""[\'Conqueror\']""]', '[""[\'Form Swapper\'""', '""\'Sorceror\']""]']", Magic Caster
+twisted_fate,3.0,700/1260/2268,40.0,40.0,55/83/162,1.0,0.7,39/58/125,Wild Cards,123,"['[""[\'Enforcer\']""]']","['[""[\'Quickstriker\']""]']",twisted_fate.png,"['[""[\'Enforcer\']""]', '[""[\'Quickstriker\']""]']", Magic Caster
+ambessa,4.0,1100/1980/3564,40.0,40.0,55/83/163,1.0,0.7,39/58/126,Unrelenting Huntress,123,"['[""[\'Emissary\'""', '""\'Conqueror\']""]']","['[""[\'Quickstriker\']""]']",ambessa.png,"['[""[\'Emissary\'""', '""\'Conqueror\']""]', '[""[\'Quickstriker\']""]']", Attack Fighter
+corki,4.0,850/1530/2754,40.0,40.0,55/83/164,1.0,0.7,39/58/127,Broadside Barrage,123,"['[""[\'Scrap\']""]']","['[""[\'Artillerist\']""]']",corki.png,"['[""[\'Scrap\']""]', '[""[\'Artillerist\']""]']", Attack Caster
+dr_mundo,4.0,1100/1980/3564,40.0,40.0,55/83/165,1.0,0.7,39/58/128,Maximum Dosage,123,"['[""[\'Experiment\']""]']","['[""[\'Dominator\']""]']",dr_mundo.png,"['[""[\'Experiment\']""]', '[""[\'Dominator\']""]']", Magic Tank
+ekko,4.0,1100/1980/3564,40.0,40.0,55/83/166,1.0,0.7,39/58/129,Splitting Seconds,123,"['[""[\'Firelight\'""', '""\'Scrap\']""]']","['[""[\'Ambusher\']""]']",ekko.png,"['[""[\'Firelight\'""', '""\'Scrap\']""]', '[""[\'Ambusher\']""]']", Magic Reaper
+elise,4.0,1100/1980/3564,40.0,40.0,55/83/167,1.0,0.7,39/58/130,Cocoon,123,"['[""[\'Black Rose\']""]']","['[""[\'Form Swapper\'""', '""\'Bruiser\']""]']",elise.png,"['[""[\'Black Rose\']""]', '[""[\'Form Swapper\'""', '""\'Bruiser\']""]']", Magic Tank
+elise_ranged,4.0,750/1350/2430,40.0,40.0,55/83/168,1.0,0.7,39/58/131,Volatile Spiderlings,123,"['[""[\'Black Rose\']""]']","['[""[\'Form Swapper\'""', '""\'Bruiser\']""]']",elise_ranged.png,"['[""[\'Black Rose\']""]', '[""[\'Form Swapper\'""', '""\'Bruiser\']""]']", Magic Caster
+garen,4.0,1000/1800/3240,40.0,40.0,55/83/169,1.0,0.7,39/58/132,Demacian Justice,123,"['[""[\'Emissary\']""]']","['[""[\'Watcher\']""]']",garen.png,"['[""[\'Emissary\']""]', '[""[\'Watcher\']""]']", Attack Tank
+heimerdinger,4.0,800/1440/2592,40.0,40.0,55/83/170,1.0,0.7,39/58/133,PROGRESSSSS!,123,"['[""[\'Academy\']""]']","['[""[\'Visionary\']""]']",heimerdinger.png,"['[""[\'Academy\']""]', '[""[\'Visionary\']""]']", Magic Caster 
+illaoi,4.0,1100/1980/3564,40.0,40.0,55/83/171,1.0,0.7,39/58/134,Test of Spirit,123,"['[""[\'Rebel\']""]']","['[""[\'Sentinel\']""]']",illaoi.png,"['[""[\'Rebel\']""]', '[""[\'Sentinel\']""]']", Magic Tank
+silco,4.0,800/1440/2592,40.0,40.0,55/83/172,1.0,0.7,39/58/135,Canned Monstrosity,123,"['[""[\'Chembaron\']""]']","['[""[\'Dominator\']""]']",silco.png,"['[""[\'Chembaron\']""]', '[""[\'Dominator\']""]']", Magic Caster
+twitch,4.0,800/1440/2592,40.0,40.0,55/83/173,1.0,0.7,39/58/136,Spray and Pray,123,"['[""[\'Experiment\']""]']","['[""[\'Sniper\']""]']",twitch.png,"['[""[\'Experiment\']""]', '[""[\'Sniper\']""]']", Attack Carry
+vi,4.0,1100/1980/3564,40.0,40.0,55/83/174,1.0,0.7,39/58/137,Wrecking Crew,123,"['[""[\'Enforcer\']""]']","['[""[\'Pit Fighter\']""]']",vi.png,"['[""[\'Enforcer\']""]', '[""[\'Pit Fighter\']""]']", Attack Fighter
+zoe,4.0,800/1440/2592,40.0,40.0,55/83/175,1.0,0.7,39/58/138,Paddle Star!,123,"['[""[\'Rebel\']""]']","['[""[\'Sorceror\']""]']",zoe.png,"['[""[\'Rebel\']""]', '[""[\'Sorceror\']""]']", Magic Caster
+caitlyn,5.0,900/1620/2916,40.0,40.0,55/83/176,1.0,0.7,39/58/139,Air Raid,123,"['[""[\'Enforcer\']""]']","['[""[\'Sniper\']""]']",caitlyn.png,"['[""[\'Enforcer\']""]', '[""[\'Sniper\']""]']", Attack Caster
+jayce,5.0,1200/2160/3888,40.0,40.0,55/83/177,1.0,0.7,39/58/140,Special Delivery,123,"['[""[\'Academy\']""]']","['[""[\'Form Swapper\']""]']",jayce.png,"['[""[\'Academy\']""]', '[""[\'Form Swapper\']""]']", Attack Fighter
+jayce_ranged,5.0,900/1620/2916,40.0,40.0,55/83/178,1.0,0.7,39/58/141,Hexcrystal Destruction,123,"['[""[\'Academy\']""]']","['[""[\'Form Swapper\']""]']",jayce_ranged.png,"['[""[\'Academy\']""]', '[""[\'Form Swapper\']""]']", Attack Caster
+jinx,5.0,900/1620/2916,40.0,40.0,55/83/179,1.0,0.7,39/58/142,Ruin Everything ,123,"['[""[\'Rebel\']""]']","['[""[\'Ambusher\']""]']",jinx.png,"['[""[\'Rebel\']""]', '[""[\'Ambusher\']""]']", Attack Caster
+leblanc,5.0,900/1620/2916,40.0,40.0,55/83/180,1.0,0.7,39/58/143,The Chains of Fate,123,"['[""[\'Black Rose\']""]']","['[""[\'Sorceror\']""]']",leblanc.png,"['[""[\'Black Rose\']""]', '[""[\'Sorceror\']""]']", Magic Caster
+malzahar,5.0,950/1710/3078,40.0,40.0,55/83/181,1.0,0.7,39/58/144,Call of the Machine,123,"['[""[\'Automata\']""]']","['[""[\'Visionary\']""]']",malzahar.png,"['[""[\'Automata\']""]', '[""[\'Visionary\']""]']", Magic Caster
+mordekaiser,5.0,1200/2160/3888,40.0,40.0,55/83/182,1.0,0.7,39/58/145,Grasp of the Iron Revenant,123,"['[""[\'Conqueror\']""]']","['[""[\'Dominator\']""]']",mordekaiser.png,"['[""[\'Conqueror\']""]', '[""[\'Dominator\']""]']", Magic Fighter
+rumble,5.0,1200/2160/3888,40.0,40.0,55/83/183,1.0,0.7,39/58/146,The Equalizer,123,"['[""[\'Junker King\'""', '""\'Scrap\']""]']","['[""[\'Sentinel\']""]']",rumble.png,"['[""[\'Junker King\'""', '""\'Scrap\']""]', '[""[\'Sentinel\']""]']", Magic Fighter
+sevika,5.0,1200/2160/3888,40.0,40.0,55/83/184,1.0,0.7,39/58/147,Beat the Odds,123,"['[""[\'High Roller\'""', '""\'Chembaron\']""]']","['[""[\'Pit Fighter\']""]']",sevika.png,"['[""[\'High Roller\'""', '""\'Chembaron\']""]', '[""[\'Pit Fighter\']""]']", Attack Fighter
