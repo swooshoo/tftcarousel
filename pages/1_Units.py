@@ -21,6 +21,10 @@ def load_unit_data(unit_path):
 def legend():
     st.sidebar.header("Legend")
     col1, col2 = st.sidebar.columns(2,gap="small")
+    # with st.sidebar.popover(''':red[AD] | Attack Damage'''):
+    #     st.markdown(':red[AD] is base physical damage dealt with normal attacks, and is a key stat for champions who rely on consistent basic attacks to deal damage.')
+    # with st.sidebar.popover(''':red[AD] | Attack Damage'''):
+    #     st.markdown(':red[AD] is base physical damage dealt with normal attacks, and is a key stat for champions who rely on consistent basic attacks to deal damage.')
     with col1:
         st.markdown(''':red[AD] | Attack Damage''')
         st.markdown(''':blue[AP] | Ability Power''') 
@@ -70,25 +74,22 @@ def render_unit(unit, cost, traits, ability, ability_desc, image_path, stats, tr
             col1, col2 = st.columns(2,gap="small")
             with col1:
                 if os.path.exists(trait_image_path):
-                    st.image(trait_image_path,width=50,)
+                    st.image(trait_image_path,width=50,)                   
                 else:
                     st.write(f"Trait image not found: {trait_image_path}")  
             with col2:
-                st.write(f"{cleaned_trait.title()}")
+                st.write(f"**{cleaned_trait.title()}**")
             trait_desc = trait_description_map.get(cleaned_trait.replace(" ","_"), "No description available.")
             formatted_trait_desc = trait_desc.replace("   ", "  \n")
             st.markdown(formatted_trait_desc)   
   
     # Tab 2: Display unit ability
     with tab2:
-        st.markdown(f"**Role:** {role}")
-        st.markdown(f"**Ability:** {ability}")
+        st.markdown(f":gray-background[{role}]")
+        st.markdown(f"**Ability:** **{ability}**")
         ability_description=(f"{ability_desc}")
+        ability_description=ability_description.replace("   ", "  \n")
         st.markdown(ability_description)
-        st.markdown(
-            '''
-            :wrench: This page is still under production! :wrench:
-            ''')
     # Tab 3: Display unit stats
     with tab3:
         with st.container():
@@ -102,7 +103,7 @@ def render_unit(unit, cost, traits, ability, ability_desc, image_path, stats, tr
             column2.metric(label="AP", value=stats['skill_cost'])
             
     with tab4: 
-        st.markdown(f"**Role:** {role}")
+        st.markdown(f":gray-background[{role}]")
         st.markdown(
             '''
             :wrench: This page is still under production! :wrench:
@@ -135,6 +136,8 @@ def main():
                         role=row['role'],
                     )
     
+    
+        
 
 if __name__ == "__main__":
     main()
