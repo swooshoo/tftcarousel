@@ -54,27 +54,41 @@ def load_traits_data(traits_path):
 # Display card for each unit
 def render_unit(unit, cost, traits, ability, ability_desc, image_path, stats, trait_description_map, role):
     unit = unit.replace("_", " ")
-    unit = unit.replace("Ranged", "")
     
     # Determine the color based on the unit cost
     cost_color_map = {1: "gray", 2: "green", 3: "blue", 4: "violet", 5: "orange"}
     cost_color = cost_color_map.get(cost, "gray") 
     # Display the header with the divider color
-    st.subheader(unit.title(), divider=cost_color)
+    st.subheader(unit.title().replace("Ranged", ""), divider=cost_color)
    
     st.image(image_path, use_container_width=False)
     # Tabs for unit-specific details
-    tab1, tab2, tab3, tab4 = st.tabs(["Traits", "Ability", "Stats", "Items"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["Info", "Traits", "Ability", "Stats", "Items"])
     
     # Tab 1: Display traits with images and names
     with tab1:
+        st.markdown(f"**:blue-background[{role}]**")
         for trait in traits:
             cleaned_trait = trait.lower().replace('"','').replace("\\","").replace("'", "").replace("[", "").replace("]", "") #could optimize this somehow?
             trait_image_path = f"static/traits/{cleaned_trait}.webp"
-            col1, col2 = st.columns(2,gap="small")
+            col1, col2 = st.columns([0.2, 0.8],gap="small")
             with col1:
                 if os.path.exists(trait_image_path):
-                    st.image(trait_image_path,width=50,)                   
+                    st.image(trait_image_path,width=30,)                   
+                else:
+                    st.markdown(f"Trait image not found: {trait_image_path}")
+            with col2:
+                st.markdown(f"**{cleaned_trait.title()}**")
+        
+    
+    with tab2:
+        for trait in traits:
+            cleaned_trait = trait.lower().replace('"','').replace("\\","").replace("'", "").replace("[", "").replace("]", "") #could optimize this somehow?
+            trait_image_path = f"static/traits/{cleaned_trait}.webp"
+            col1, col2 = st.columns(2,gap="small",)
+            with col1:
+                if os.path.exists(trait_image_path):
+                    st.image(trait_image_path,width=30,)                   
                 else:
                     st.write(f"Trait image not found: {trait_image_path}")  
             with col2:
@@ -84,14 +98,14 @@ def render_unit(unit, cost, traits, ability, ability_desc, image_path, stats, tr
             st.markdown(formatted_trait_desc)   
   
     # Tab 2: Display unit ability
-    with tab2:
-        st.markdown(f":gray-background[{role}]")
+    with tab3:
+        st.markdown(f"**:blue-background[{role}]**")
         st.markdown(f"**Ability:** **{ability}**")
         ability_description=(f"{ability_desc}")
         ability_description=ability_description.replace("   ", "  \n")
         st.markdown(ability_description)
     # Tab 3: Display unit stats
-    with tab3:
+    with tab4:
         with st.container():
             st.metric(label="HP", value=stats['health'])
             column1, column2 = st.columns(2)
@@ -102,14 +116,14 @@ def render_unit(unit, cost, traits, ability, ability_desc, image_path, stats, tr
             column1.metric(label="AD", value=stats['attack'])
             column2.metric(label="AP", value=stats['skill_cost'])
             
-    with tab4: 
+    with tab5: 
         st.markdown(f":gray-background[{role}]")
         st.markdown(
             '''
             :wrench: This page is still under production! :wrench:
             ''')
             
-    st.subheader(" ",divider=cost_color) 
+    #st.subheader(" ",divider=cost_color) 
     
 def main():
     # Load data
