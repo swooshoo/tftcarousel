@@ -65,7 +65,7 @@ def render_unit(unit, cost, traits, ability, ability_desc, image_path, stats, tr
     # Tabs for unit-specific details
     tab1, tab2, tab3, tab4, tab5 = st.tabs(["Info", "Traits", "Ability", "Stats", "Items"])
     
-    # Tab 1: Display traits with images and names
+    # Tab 1: Display Overview with role and traits
     with tab1:
         st.markdown(f"**:blue-background[{role}]**")
         for trait in traits:
@@ -117,7 +117,7 @@ def render_unit(unit, cost, traits, ability, ability_desc, image_path, stats, tr
             column2.metric(label="AP", value=stats['skill_cost'])
             
     with tab5: 
-        st.markdown(f":gray-background[{role}]")
+        st.markdown(f"**:blue-background[{role}]**")
         st.markdown(
             '''
             :wrench: This page is still under production! :wrench:

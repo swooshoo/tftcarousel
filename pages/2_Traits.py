@@ -50,7 +50,8 @@ def render_trait(trait, description):
     st.divider() 
     trait = trait.replace("_", " ")
     trait_image_path = f"static/traits/{trait}.webp"
-    col1, col2 = st.columns(2,gap="small")
+    col1, col2 = st.columns([0.3,0.7],gap="small")
+    st.markdown('<div style="text-align:right;">f"{trait.title()}"</div>', unsafe_allow_html=True)
     with col1:
         if os.path.exists(trait_image_path):
             st.image(trait_image_path,width=60,)
