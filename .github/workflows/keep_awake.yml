@@ -1,0 +1,21 @@
+name: Keep App Awake
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs once a day at midnight UTC
+
+jobs:
+  keep_awake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send a request with Python
+        run: |
+          python -c "
+          import requests
+          url = 'https://tftcarousel.streamlit.app/'
+          try:
+              response = requests.get(url)
+              print('Status:', response.status_code)
+          except Exception as e:
+              print('Error:', e)
+          "
